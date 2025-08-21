@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function TestBack() {
+function TestBack() {
   const [message, setmessage] = useState("");
 
   useEffect(() => {
@@ -10,9 +10,17 @@ export default function TestBack() {
       }/testBackend`
     )
       .then((response) => response.text())
-      .then((data) => setmessage(data))
-      .catch((err) => setmessage("Erreur : " + err.message));
+      .then((data) => {
+        setmessage(data);
+      })
+
+      .catch((err) => {
+        setmessage("Erreur : " + err.message);
+        console.error(err);
+      });
   }, []);
 
   return <div>{message}</div>;
 }
+
+export default TestBack;
