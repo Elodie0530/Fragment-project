@@ -1,0 +1,8 @@
+.nav_bar {
+  background-color: aquamarine;
+
+  li {
+    color: red;
+    font-style: oblique;
+  }
+}
