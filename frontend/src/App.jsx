@@ -1,19 +1,19 @@
 import "./App.css";
-import TestBack from "./components/test_com_back";
+import { Outlet } from "react-router-dom";
+
 import NavBar from "./components/NavBar";
-import Home from "./pages/Home";
+import TestBack from "./components/test_com_back";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <NavBar />
       <div>
-        <h2>Test communication entre front et back</h2>
+        <NavBar />
+        <Outlet />
         <TestBack />
-        <Home />
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
