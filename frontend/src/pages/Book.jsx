@@ -1,4 +1,5 @@
 import "./Book.css";
+import TestBack from "../components/test_com_back";
 
 function BookPage() {
   return (
@@ -8,6 +9,10 @@ function BookPage() {
         <div className="text_test">
           Cette page sera consacrée à la partie livre dont vous êtes le héros
           qui est le coeur du projet.
+        </div>
+
+        <div className="return_backend">
+          <TestBack />
         </div>
       </div>
     </>
