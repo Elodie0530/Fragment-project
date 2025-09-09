@@ -1,8 +1,11 @@
 .nav_bar {
   background-color: aquamarine;
-
-  li {
-    color: red;
-    font-style: oblique;
+  ul {
+    color: orangered;
+  }
+  .page {
+    background-color: beige;
+    font-style: normal;
+    text-decoration: none;
   }
 }

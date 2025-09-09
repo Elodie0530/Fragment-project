@@ -1,16 +1,42 @@
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 function Navbar() {
   return (
-    <div className="nav_bar">
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Hello navbar</a>{" "}
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav className="nav_bar">
+      <ul>
+        <li>
+          <Link to="/" className="page">
+            Accueil
+          </Link>
+        </li>
+        <li>
+          <Link to="/livre" className="page">
+            Livre dont vous êtes le héros
+          </Link>
+        </li>
+        <li>
+          <Link to="/jdr" className="page">
+            Jeu de Rôle
+          </Link>
+        </li>
+        <li>
+          <Link to="/gn" className="page">
+            Mini-Grandeur Nature
+          </Link>
+        </li>
+        <li>
+          <Link to="/formulaire" className="page">
+            Formulaire - Avis
+          </Link>
+        </li>
+        <li>
+          <Link to="/credits" className="page">
+            Crédits
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
