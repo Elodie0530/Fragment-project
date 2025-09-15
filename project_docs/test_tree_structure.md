@@ -1,8 +1,8 @@
 ### Test pour visualiser mon arborescence de la partie Livre avec Mermaid
 
-Ce fichier contient deux essais d'affichage de l'acte 1 avec Mermaid, qui permet un rendu sous forme graphique dans GitHub.
-J'ai testé le rendu sur le site "mermaid.live.editor", mais je trouve les schémas peu lisibles.  
-Pour cette raison, je laisserai mon code dans ce fichier de test, entouré par les balises HTML ```<pre> <code>` car cela deviens du coup aussi partie de mon projet.  
+Ce fichier contient deux essais d'affichage de l'acte 1 avec Mermaid, qui permet un rendu sous forme graphique dans GitHub.  
+J'ai testé le rendu sur le site _"mermaid.live.editor"_, mais je trouve les schémas peu lisibles.  
+Pour cette raison, je conserve mon code dans ce fichier de test comme trace de mes essais dans le cadre de ce projet, entouré par les balises HTML `<pre>` et `<code>` pour éviter que GitHub ne le transforme en graphique.  
 L'arborescence finale sera présentée via des fichiers images importés.
 
 <br>
@@ -88,6 +88,7 @@ end
 </code></pre>
 
 ---
+
 <br>  
 ##### Ce graphique s'affiche de gauche à droite, indiquer avec _graph LR_.
 
