@@ -13,16 +13,19 @@ const migrate = async () => {
     password: DB_PASSWORD,
     multipleStatements: true,
   });
-
+  console.log("connexion mysql");
   await connection.query(`drop database if exists ${DB_NAME}`);
+  console.log("base supprimée");
   await connection.query(`create database ${DB_NAME}`);
+  console.log("base créer");
   await connection.query(`use ${DB_NAME}`);
-
-  const sql = fs.readFileSync("./database.sql", "utf8");
-
+  console.log("utilisation base");
+  const sql = fs.readFileSync("./sql/tables.sql", "utf8");
+  console.log("sql lu");
   await connection.query(sql);
-
+  console.log("tables créer");
   connection.end();
+  console.log("connexion terminée");
 };
 
 try {
