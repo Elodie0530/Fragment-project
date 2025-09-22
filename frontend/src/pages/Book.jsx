@@ -1,5 +1,6 @@
 import "./Book.css";
 import TestBack from "../components/test_com_back";
+import TestControllers from "../components/fetchController";
 
 function BookPage() {
   return (
@@ -13,6 +14,7 @@ function BookPage() {
 
         <div className="return_backend">
           <TestBack />
+          <TestControllers />
         </div>
       </div>
     </>
