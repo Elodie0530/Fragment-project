@@ -1,32 +1,5 @@
 const models = require("../models");
 
-/* Code for test local with script testControl.js
-Use async and await for simulate request server*/
-
-/*const browse = async (req, res) => {
-  try {
-    const [rows] = await models.test.findAll();
-    res.send(rows);
-  } catch (err) {
-    console.error(err);
-    res.sendStatus(500);
-  }
-};
-
-const read = async (req, res) => {
-  try {
-    const [rows] = await models.test.find(req.params.id);
-    if (!rows[0]) {
-      res.sendStatus(404);
-    } else {
-      res.send(rows[0]);
-    }
-  } catch (err) {
-    console.error(err);
-    res.sendStatus(500);
-  }
-};*/
-
 const browse = (req, res) => {
   models.test
     .findAll()

@@ -43,15 +43,6 @@ const reactIndexFile = path.join(
   "index.html"
 );
 
-/* Temporary app.get routes test local file testControllers.js 
-Before moving to router.js
-Used to verify communication between controllers and models
-
-const testControllers = require("./controllers/testControllers");
-app.get("/test", testControllers.browse);
-app.get("/test/:id", testControllers.read);
-*/
-
 if (fs.existsSync(reactIndexFile)) {
   // serve REACT resources
 
