@@ -1,8 +1,8 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.test
-    .findAll()
+  models.chapter
+    .findByHistory(req.params.historyId)
     .then(([rows]) => {
       res.json(rows);
     })
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.test
+  models.chapter
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -29,14 +29,14 @@ const read = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const test = req.body;
+  const chapter = req.body;
 
   // TODO validations (length, format...)
 
-  test.id = parseInt(req.params.id, 10);
+  chapter.id = parseInt(req.params.id, 10);
 
-  models.test
-    .update(test)
+  models.chapter
+    .update(chapter)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -51,12 +51,12 @@ const edit = (req, res) => {
 };
 
 const add = (req, res) => {
-  const test = req.body;
+  const chapter = req.body;
 
   // TODO validations (length, format...)
 
-  models.test
-    .insert(test)
+  models.chapter
+    .insert(chapter)
     .then(([{ insertId }]) => {
       res.status(201).json({ insertId });
     })
@@ -67,7 +67,7 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
-  models.test
+  models.chapter
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {

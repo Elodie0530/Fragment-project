@@ -4,11 +4,7 @@ function TestBack() {
   const [message, setmessage] = useState("");
 
   useEffect(() => {
-    fetch(
-      `${
-        import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8000"
-      }/testBackend`
-    )
+    fetch(`${import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8000"}/api`)
       .then((response) => response.text())
       .then((data) => {
         setmessage(data);

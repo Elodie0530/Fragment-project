@@ -35,6 +35,16 @@ const TestManager = require("./TestManager");
 models.test = new TestManager();
 models.test.setDatabase(pool);
 
+const HistoryManager = require("./HistoryManager");
+
+models.history = new HistoryManager();
+models.history.setDatabase(pool);
+
+const ChapterManager = require("./ChapterManager");
+
+models.chapter = new ChapterManager();
+models.chapter.setDatabase(pool);
+
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 

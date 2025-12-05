@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.test
+  models.history
     .findAll()
     .then(([rows]) => {
       res.json(rows);
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.test
+  models.history
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -35,7 +35,7 @@ const edit = (req, res) => {
 
   test.id = parseInt(req.params.id, 10);
 
-  models.test
+  models.history
     .update(test)
     .then(([result]) => {
       if (result.affectedRows === 0) {
@@ -55,7 +55,7 @@ const add = (req, res) => {
 
   // TODO validations (length, format...)
 
-  models.test
+  models.history
     .insert(test)
     .then(([{ insertId }]) => {
       res.status(201).json({ insertId });
@@ -67,7 +67,7 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
-  models.test
+  models.history
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {

@@ -5,7 +5,11 @@ function TestCom() {
   const [testControllers, setTestControllers] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8000"}/test`)
+    fetch(
+      `${
+        import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8000"
+      }/api/histories`
+    )
       .then((response) => response.json())
       .then((data) => {
         setTestControllers(data);
@@ -23,8 +27,9 @@ function TestCom() {
         /*this key unique it's necessairy but is a array map*/
         <div key={testBdd.id}>
           <p>Titre : {testBdd.title} </p>
-          <p>Numéro chapitre : {testBdd.chapter_number} </p>
-          <p>Texte du chapitre : {testBdd.chapter_text} </p>
+          <p>Date : {testBdd.created_at} </p>
+          {/* <p>Numéro chapitre : {testBdd.chapter_number} </p>
+          <p>Texte du chapitre : {testBdd.chapter_text} </p> */}
         </div>
       ))}
     </>

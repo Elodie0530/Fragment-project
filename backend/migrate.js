@@ -23,10 +23,21 @@ const migrate = async () => {
   const tables = fs.readFileSync("./sql/tables.sql", "utf8");
   await connection.query(tables);
 
-  const insert_book = fs.readFileSync("./sql/insert_book.sql", "utf8");
-  await connection.query(insert_book);
+  const insert_fragment_book_and_chapters = fs.readFileSync(
+    "./sql/insert_fragment_book_and_chapters.sql",
+    "utf8"
+  );
+  await connection.query(insert_fragment_book_and_chapters);
+
+  const insert_fragment_leads_to = fs.readFileSync(
+    "./sql/insert_fragment_leads_to.sql",
+    "utf8"
+  );
+  await connection.query(insert_fragment_leads_to);
 
   connection.end();
+
+  console.log("success!");
 };
 
 try {

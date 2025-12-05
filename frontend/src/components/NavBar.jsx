@@ -11,8 +11,8 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/livre" className="page">
-            Livre dont vous êtes le héros
+          <Link to="/books" className="page">
+            Les livres dont vous êtes le héros
           </Link>
         </li>
         <li>
