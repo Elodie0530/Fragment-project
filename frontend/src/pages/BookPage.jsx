@@ -16,7 +16,9 @@ function BookPage() {
       .then((response) => response.json())
       .then((data) => {
         setChapters(data);
-        setCurrentChapter(data.find((dataElement) => dataElement.is_first === true));
+        setCurrentChapter(
+          data.find((dataElement) => Boolean(dataElement.is_first) === true)
+        );
       })
       .catch((err) => {
         console.error(err);
@@ -38,9 +40,15 @@ function BookPage() {
           <p>{currentChapter.text_normal}</p>
           {currentChapter.actions.map(({ end_id, action }) => (
             /*this key unique it's necessairy but is a array map*/
-            <button type="button" key={end_id} onClick={() => {
-              setCurrentChapter (chapters.find(oneChapter => oneChapter.id === end_id))
-            }}>
+            <button
+              type="button"
+              key={end_id}
+              onClick={() => {
+                setCurrentChapter(
+                  chapters.find((oneChapter) => oneChapter.id === end_id)
+                );
+              }}
+            >
               {action}
             </button>
           ))}
