@@ -37,9 +37,12 @@ function BookPage() {
       {currentChapter != null && (
         <section>
           <h2>{currentChapter.title}</h2>
+
           <img
             className="images"
-            src={currentChapter.image_path}
+            src={`${import.meta.env.VITE_BACKEND_URL}${
+              currentChapter.image_path
+            }`}
             alt={currentChapter.image_alt}
           />
 

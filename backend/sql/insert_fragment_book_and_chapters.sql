@@ -7,6 +7,6 @@ INSERT INTO history (id, title) VALUES
 (1, "Fragment");
 
 INSERT INTO chapter (id, title, is_first, text_normal, history_id, number, image_path, image_alt) VALUES 
-(1, "depart", true, "test texte normal modifier", 1, 1, "https://picsum.photos/200.jpg", "test alt 1"),
-(28, "école", false, "hello", 1, 2, "https://picsum.photos/200.jpg", "test alt 2"),
-(75, "fontaine", false, "test texte folie", 1, 3, "https://picsum.photos/200.jpg", "test alt 3");
+(1, "depart", true, "test texte normal modifier", 1, 1, "/fragment/test_depart.png", "test alt 1 - Logo du projet Fragment"),
+(28, "école", false, "hello", 1, 2, "/fragment/test_ecole.jpg", "test alt 2 - Illustration d'une école par IA"),
+(75, "fontaine", false, "test texte folie", 1, 3, "/fragment/test_des.jpg", "test alt 3 - Un dé 20 de JDR");
