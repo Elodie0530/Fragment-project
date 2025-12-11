@@ -18,6 +18,8 @@ CREATE TABLE chapter (
     text_normal VARCHAR(255),
     history_id INT NOT NULL,
     number INT NOT NULL,
+    image_path VARCHAR(255),
+    image_alt VARCHAR(255),
     CONSTRAINT fk_history_id FOREIGN KEY (history_id) REFERENCES history(id)
 );
 

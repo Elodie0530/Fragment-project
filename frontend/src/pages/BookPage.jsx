@@ -37,6 +37,12 @@ function BookPage() {
       {currentChapter != null && (
         <section>
           <h2>{currentChapter.title}</h2>
+          <img
+            className="images"
+            src={currentChapter.image_path}
+            alt={currentChapter.image_alt}
+          />
+
           <p>{currentChapter.text_normal}</p>
           {currentChapter.actions.map(({ end_id, action }) => (
             /*this key unique it's necessairy but is a array map*/
