@@ -6,6 +6,7 @@ function BookPage() {
   const { id } = useParams();
   const [chapters, setChapters] = useState([]);
   const [currentChapter, setCurrentChapter] = useState(null);
+  const [haveFragment, setHaveFragment] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -24,6 +25,15 @@ function BookPage() {
         console.error(err);
       });
   }, [id]);
+
+  let displayTextCurrentChapter = "";
+  if (currentChapter) {
+    if (haveFragment && currentChapter.text_insane) {
+      displayTextCurrentChapter = currentChapter.text_insane;
+    } else {
+      displayTextCurrentChapter = currentChapter.text_normal;
+    }
+  }
 
   return (
     <>
@@ -46,16 +56,27 @@ function BookPage() {
             alt={currentChapter.image_alt}
           />
 
-          <p>{currentChapter.text_normal}</p>
+          <p>{displayTextCurrentChapter}</p>
+
           {currentChapter.actions.map(({ end_id, action }) => (
             /*this key unique it's necessairy but is a array map*/
             <button
               type="button"
               key={end_id}
               onClick={() => {
-                setCurrentChapter(
-                  chapters.find((oneChapter) => oneChapter.id === end_id)
+                const newStartCurrentChapter = chapters.find(
+                  (oneChapter) => oneChapter.id === end_id
                 );
+
+                setCurrentChapter(newStartCurrentChapter);
+
+                if (Boolean(newStartCurrentChapter?.is_first) === true) {
+                  setHaveFragment(false);
+                } else if (
+                  Boolean(newStartCurrentChapter?.gives_fragment) === true
+                ) {
+                  setHaveFragment(true);
+                }
               }}
             >
               {action}

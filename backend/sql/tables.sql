@@ -20,6 +20,8 @@ CREATE TABLE chapter (
     number INT NOT NULL,
     image_path VARCHAR(255),
     image_alt VARCHAR(255),
+    gives_fragment BOOLEAN,
+    text_insane VARCHAR(255),
     CONSTRAINT fk_history_id FOREIGN KEY (history_id) REFERENCES history(id)
 );
 
