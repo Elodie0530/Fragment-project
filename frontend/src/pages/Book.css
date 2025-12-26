@@ -10,3 +10,19 @@
     background-color: greenyellow;
   }
 }
+.chapter_choice {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.button_chapter_choice {
+  background-color: bisque;
+  cursor: pointer;
+  width: 60%;
+  max-width: 80%;
+  padding: 0.25rem;
+  text-align: center;
+  border-radius: 10px;
+}

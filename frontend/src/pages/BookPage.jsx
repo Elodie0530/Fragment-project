@@ -58,30 +58,33 @@ function BookPage() {
 
           <p>{displayTextCurrentChapter}</p>
 
-          {currentChapter.actions.map(({ end_id, action }) => (
-            /*this key unique it's necessairy but is a array map*/
-            <button
-              type="button"
-              key={end_id}
-              onClick={() => {
-                const newStartCurrentChapter = chapters.find(
-                  (oneChapter) => oneChapter.id === end_id
-                );
+          <div className="chapter_choice">
+            {currentChapter.actions.map(({ end_id, action }) => (
+              /*this key unique it's necessairy but is a array map*/
+              <button
+                className="button_chapter_choice"
+                type="button"
+                key={end_id}
+                onClick={() => {
+                  const newStartCurrentChapter = chapters.find(
+                    (oneChapter) => oneChapter.id === end_id
+                  );
 
-                setCurrentChapter(newStartCurrentChapter);
+                  setCurrentChapter(newStartCurrentChapter);
 
-                if (Boolean(newStartCurrentChapter?.is_first) === true) {
-                  setHaveFragment(false);
-                } else if (
-                  Boolean(newStartCurrentChapter?.gives_fragment) === true
-                ) {
-                  setHaveFragment(true);
-                }
-              }}
-            >
-              {action}
-            </button>
-          ))}
+                  if (Boolean(newStartCurrentChapter?.is_first) === true) {
+                    setHaveFragment(false);
+                  } else if (
+                    Boolean(newStartCurrentChapter?.gives_fragment) === true
+                  ) {
+                    setHaveFragment(true);
+                  }
+                }}
+              >
+                {action}
+              </button>
+            ))}
+          </div>
         </section>
       )}
     </>
