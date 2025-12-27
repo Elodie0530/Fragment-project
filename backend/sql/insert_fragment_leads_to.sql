@@ -1,3 +1,4 @@
+/* test data
 INSERT INTO lead_to (action, start_id, end_id) VALUES
 (
     "vers la fontaine",
@@ -47,5 +48,21 @@ INSERT INTO lead_to (action, start_id, end_id) VALUES
 (
     "fin, recommencer ?",
     (select id from chapter where history_id = 1 and number=5),
+    (select id from chapter where history_id = 1 and number=1)
+);*/
+
+INSERT INTO lead_to (action, start_id, end_id) VALUES
+
+-- Chapitre 1 — Carte départ
+(
+    "La place de la fontaine",
+    (select id from chapter where history_id = 1 and number=1),
+    (select id from chapter where history_id = 1 and number=2)
+),
+
+-- Chapitre 2 — Place de la fontaine
+(
+    "Départ",
+    (select id from chapter where history_id = 1 and number=2),
     (select id from chapter where history_id = 1 and number=1)
 );

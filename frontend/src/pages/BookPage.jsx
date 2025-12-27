@@ -56,7 +56,7 @@ function BookPage() {
             alt={currentChapter.image_alt}
           />
 
-          <p>{displayTextCurrentChapter}</p>
+          <p className="display_text_current">{displayTextCurrentChapter}</p>
 
           <div className="chapter_choice">
             {currentChapter.actions.map(({ end_id, action }) => (

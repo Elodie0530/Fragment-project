@@ -13,15 +13,15 @@ CREATE TABLE history (
 
 CREATE TABLE chapter (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    history_id INT NOT NULL,
     title VARCHAR(255),
     is_first BOOLEAN,
-    text_normal VARCHAR(255),
-    history_id INT NOT NULL,
     number INT NOT NULL,
+    gives_fragment BOOLEAN,
+    text_normal TEXT,
+    text_insane TEXT,
     image_path VARCHAR(255),
     image_alt VARCHAR(255),
-    gives_fragment BOOLEAN,
-    text_insane VARCHAR(255),
     CONSTRAINT fk_history_id FOREIGN KEY (history_id) REFERENCES history(id)
 );
 
