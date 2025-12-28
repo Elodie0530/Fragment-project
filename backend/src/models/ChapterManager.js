@@ -12,8 +12,9 @@ class ChapterManager extends AbstractManager {
       JSON_ARRAYAGG(
       JSON_OBJECT(
       "action", lead_to.action,
-      "end_id", lead_to.end_id
-      )
+      "end_id", lead_to.end_id,
+      "position", lead_to.position
+      ) 
     ) as actions
      from ${this.table}
      left join lead_to on chapter.id=lead_to.start_id

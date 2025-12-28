@@ -29,5 +29,6 @@ CREATE TABLE lead_to (
     id INT AUTO_INCREMENT PRIMARY KEY,
     action VARCHAR(255),
     start_id INT,
-    end_id INT
+    end_id INT,
+   position INT
 );
