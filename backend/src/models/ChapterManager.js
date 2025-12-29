@@ -11,6 +11,7 @@ class ChapterManager extends AbstractManager {
       chapter.*,
       JSON_ARRAYAGG(
       JSON_OBJECT(
+      "id", lead_to.id,
       "action", lead_to.action,
       "end_id", lead_to.end_id,
       "position", lead_to.position

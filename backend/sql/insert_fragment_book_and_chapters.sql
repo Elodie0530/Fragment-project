@@ -65,4 +65,27 @@ Autour, l’auberge historique “Bretzel Duergar”, l’école du village et l
 Où souhaitez-vous vous rendre ?
 ",
 "/fragment/place_fontaine.jpg",
-"Place du village avec au centre, une fontaine incrustée de joyaux surmontée d’une statue et des bâtiments ainsi que des stands de marchands ambulants autour.");
+"Place du village avec au centre, une fontaine incrustée de joyaux surmontée d’une statue et des bâtiments ainsi que des stands de marchands ambulants autour."),
+
+-- Chapitre 11 — L’Auberge Duergar
+(1,
+"L’Auberge Duergar",
+false,
+11,
+false,
+"L’auberge est une ancienne bâtisse imposante et chargée d’histoires.
+Elle est réputée dans la région et classée au patrimoine de la ville. 
+Aux beaux jours, sa petite terrasse invite à la détente.
+
+Que faites-vous ?
+",
+
+"L’auberge est une ancienne bâtisse imposante et chargée d’histoires que laissent transparaître les pierres.
+Elle est réputée dans la région et classée au patrimoine de la ville. 
+Aux beaux jours, sa petite terrasse invite à la détente.
+
+Que faites-vous ?
+",
+"/fragment/auberge_duergar.jpg",
+"Vue extérieure de l’auberge en pierre rustique “Bretzel Duergar”, illuminée de lanternes. 
+Elle possède une cour pavée et quelques tables ombragées par un arbre.");

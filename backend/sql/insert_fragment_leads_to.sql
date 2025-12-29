@@ -75,4 +75,21 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "Explorer la bijouterie",
     (select id from chapter where history_id = 1 and number=2),
     (select id from chapter where history_id = 1 and number=33), 3
+),
+
+-- Chapitre 11 — L’Auberge Duergar
+(
+    "Entrer dans l’auberge",
+    (select id from chapter where history_id = 1 and number=11),
+    (select id from chapter where history_id = 1 and number=34), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number=11),
+    (select id from chapter where history_id = 1 and number=2), 2
+),
+(
+    "Se rendre à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number=11),
+    (select id from chapter where history_id = 1 and number=6), 3
 );

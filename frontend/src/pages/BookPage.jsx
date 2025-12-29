@@ -61,12 +61,12 @@ function BookPage() {
           <div className="chapter_choice">
             {currentChapter.actions
               .sort((a, b) => a.position - b.position)
-              .map(({ end_id, action }) => (
+              .map(({ id, end_id, action }) => (
                 /*this key unique it's necessairy but is a array map*/
                 <button
                   className="button_chapter_choice"
                   type="button"
-                  key={end_id}
+                  key={id}
                   onClick={() => {
                     const newStartCurrentChapter = chapters.find(
                       (oneChapter) => oneChapter.id === end_id
