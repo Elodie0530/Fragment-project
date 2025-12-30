@@ -29,9 +29,15 @@
 .images {
   max-width: 90%;
   height: auto;
+
+  /*text image alt*/
+  white-space: pre-wrap;
+  text-align: left;
 }
 
 .display_text_current {
   background-color: rgb(250, 250, 231);
   white-space: pre-wrap;
+  text-align: left;
+  padding: 0rem 3rem;
 }
