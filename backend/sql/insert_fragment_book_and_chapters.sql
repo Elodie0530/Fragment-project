@@ -16,7 +16,7 @@ INSERT INTO chapter (id, title, is_first, text_normal, history_id, number, image
 
 INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES 
 
--- Chapitre 1 — Carte départ
+-- Acte 1 — Chapitre 1 — Carte départ
 (1,
 "Carte départ",
 true,
@@ -44,7 +44,7 @@ NULL,
 "/fragment/carte_depart.jpg",
 "Carte du secteur de jeu comme décrit dans le texte attenant."),
 
--- Chapitre 2 — Place de la fontaine
+-- Acte 1 — Chapitre 2 — Place de la fontaine
 (1,
 "Place de la fontaine",
 false,
@@ -67,7 +67,7 @@ Où souhaitez-vous vous rendre ?
 "/fragment/place_fontaine.jpg",
 "Place du village avec au centre, une fontaine incrustée de joyaux surmontée d’une statue et des bâtiments ainsi que des stands de marchands ambulants autour."),
 
--- Chapitre 11 — L’Auberge Duergar
+-- Acte 1 — Chapitre 11 — L’Auberge Duergar
 (1,
 "L’Auberge Duergar",
 false,
@@ -86,6 +86,105 @@ Aux beaux jours, sa petite terrasse invite à la détente.
 
 Que faites-vous ?
 ",
-"/fragment/auberge_duergar.jpg",
+"/fragment/auberge/auberge_duergar.jpg",
 "Vue extérieure de l’auberge en pierre rustique “Bretzel Duergar”, illuminée de lanternes. 
-Elle possède une cour pavée et quelques tables ombragées par un arbre.");
+Elle possède une cour pavée et quelques tables ombragées par un arbre."),
+
+-- Acte 1 — Chapitre 34 — Entrer dans l’auberge, parler avec
+(1,
+"Entrer dans l’auberge, parler avec",
+false,
+34,
+false,
+"Vous pénétrez dans l’auberge où règne une atmosphère chaleureuse. L’odeur du pain chaud et des épices flotte dans l’air.
+Autour de vous, un serveur s’affaire entre les tables, quelques clients sont attablés, certains accoudés au bar. 
+Les aubergistes, Monsieur Bicar et Madame Mauricette, veillent d’un œil attentif sur leur établissement.
+
+À qui souhaitez-vous parler ?
+",
+
+"Vous pénétrez dans l’auberge où règne une atmosphère chaleureuse. 
+Une odeur familière flotte dans l’air, mais elle a quelque chose d’étrange, trop sucrée, presque écoeurante, comme du pain chaud qui aurait trop cuit.
+Autour de vous, un serveur s’affaire entre les tables, quelques clients sont attablés, certains accoudés au bar. 
+Les aubergistes, Monsieur Bicar et Madame Mauricette, veillent d’un œil attentif sur leur établissement.
+La pièce semble se refermer légèrement sur vous, comme si l’air se faisait plus lourd, plus oppressant.
+
+À qui souhaitez-vous parler ?
+",
+"/fragment/entrer_parler.jpg",
+"Porte voutée ouverte, lumière orangée de l’autre côté du seuil. Invitant à entrer."),
+
+-- Acte 1 — Chapitre 3 — Serveur
+(1,
+"Serveur",
+false,
+3,
+false,
+"Je n’ai pas le temps de bavarder. 
+Je travaille moi, si vous cherchez des informations, allez plutôt voir les patrons, et retirez-vous du passage, vous gênez ici.
+
+Que faites-vous ?
+",
+
+NULL,
+"/fragment/auberge/auberge_serveur.jpg",
+"Intérieur de l’auberge en bois. Des clients sont assis à table ou au bar. 
+Un serveur arrive face à vous en courant."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 1 — Chapitre 49 — Client attablé
+(1,
+"Client attablé",
+false,
+49,
+false,
+"“Avez-vous déjà dégusté l’une de leurs spécialités ? 
+Les bretzels et les mauricettes… Ils sont excellents ! Leurs spécialités, pas les patrons.”
+Il croque un morceau de bretzel avec un sourire rêveur, puis reprend, d’un ton presque philosophe : 
+“En revenant de leurs voyages, ils en ont ramené d’autres… et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée. Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste… Parfois, on ne trouve pas la bonne personne en face qui sait l’apprécier.
+Il s’interrompt, regarde par le trou de sa bretzel comme s’il venait de comprendre quelque chose… 
+Puis hausse les épaules et continue de manger.
+",
+
+NULL,
+"/fragment/auberge/auberge_table_client.jpg",
+"Un homme seul attablé, tenant une bretzel dans une main."),
+
+-- Acte 1 — Chapitre 27 — Client au bar
+(1,
+"Client au bar",
+false,
+27,
+false,
+"“Vous devriez goûter leurs cuvées, elles sont fameuses. 
+Charpentées et harmonieuses, riches et subtiles… agréables et cristallines.”
+Il prend une gorgée, semble réfléchir intensément, puis se penche vers vous d’un air sérieux.
+“Vous savez, moi, je ne crois pas qu’il y ait de bonnes ou de mauvaises récoltes. Si je devais résumer une bouteille aujourd’hui avec vous, je dirais que ce sont de simples grains de raisin arrivés à maturité et mélangés…”
+Il hoche la tête, satisfait, et se détourne pour interpeller le serveur.
+
+",
+
+NULL,
+"/fragment/auberge/auberge_bar_client.jpg",
+"Homme barbu accoudé au comptoir du bar, un verre à la main."),
+
+-- Acte 1 — Chapitre 55 — Aubergistes
+(1,
+"Aubergistes",
+false,
+55,
+false,
+"Monsieur Bicar, aisément reconnaissable à sa barbe tressée en forme de bretzel et Madame Mauricette vous accueillent d’un large sourire.
+“Nous tenons cet établissement réputé, nous sommes revenus depuis peu d’un long voyage à travers les différentes contrées.
+Nous avons rapporté d’excellents crus, et de nouvelles spécialités. Passez donc les goûter à l’occasion !”
+
+Puis, baissant légèrement la voix, ils ajoutent : 
+“Si nous vous avons fait venir, c’est parce que nous avons remarqué des personnes ayant des comportements étranges en ville. Tels que les membres de la noblesse qui semblent converser avec des voix invisibles… Des joailliers-bijoutiers qui vendent leurs créations élaborées à des prix dérisoires ou encore certains des mineurs qui sont devenus assez méfiants, sans que l’on sache exactement pourquoi. 
+Nos contacts communs vous en ont sans doute déjà touché un mot, pensez-vous pouvoir faire quelque chose ?”
+",
+
+NULL,
+"/fragment/auberge/aubergistes.jpg",
+"Le couple d’aubergistes souriant, Bicar à gauche ayant une barbe en forme de bretzel. 
+Sa femme Mauricette à droite porte une robe avec des cheveux longs.");
