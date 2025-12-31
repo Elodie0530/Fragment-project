@@ -21,7 +21,7 @@ CREATE TABLE chapter (
     text_normal TEXT,
     text_insane TEXT,
     image_path VARCHAR(255),
-    image_alt VARCHAR(255),
+    image_alt TEXT,
     CONSTRAINT fk_history_id FOREIGN KEY (history_id) REFERENCES history(id)
 );
 

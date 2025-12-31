@@ -162,4 +162,103 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "Revenir place de la fontaine",
     (select id from chapter where history_id = 1 and number = 55),
     (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 22 — L'École du village
+(
+    "Entrer dans l’école",
+    (select id from chapter where history_id = 1 and number = 22),
+    (select id from chapter where history_id = 1 and number = 15), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 22),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+(
+    "Se rendre à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number = 22),
+    (select id from chapter where history_id = 1 and number = 6), 3
+),
+
+-- Acte 1 — Chapitre 15 — Entrer dans l’école, parler avec
+(
+    "Le professeur",
+    (select id from chapter where history_id = 1 and number = 15),
+    (select id from chapter where history_id = 1 and number = 30), 1
+),
+(
+    "Les élèves",
+    (select id from chapter where history_id = 1 and number = 15),
+    (select id from chapter where history_id = 1 and number = 19), 2
+),
+(
+    "La tombola",
+    (select id from chapter where history_id = 1 and number = 15),
+    (select id from chapter where history_id = 1 and number = 54), 3
+),
+(
+    "Orsik Pioche d’Argent",
+    (select id from chapter where history_id = 1 and number = 15),
+    (select id from chapter where history_id = 1 and number = 4), 4
+),
+
+-- Acte 1 — Chapitre 30 — Le professeur
+(
+    "Retourner dans l'entrée de l’école",
+    (select id from chapter where history_id = 1 and number = 30),
+    (select id from chapter where history_id = 1 and number = 15), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 30),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 19 — Les élèves
+(
+    "Retourner dans l'entrée de l’école",
+    (select id from chapter where history_id = 1 and number = 19),
+    (select id from chapter where history_id = 1 and number = 15), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 19),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 54 — La tombola
+(
+    "Oui, voir le gain remporté",
+    (select id from chapter where history_id = 1 and number = 54),
+    (select id from chapter where history_id = 1 and number = 63), 1
+),
+(
+    "Non, je ne veux pas jouer",
+    (select id from chapter where history_id = 1 and number = 54),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 63 — Gain tombola
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 63),
+    (select id from chapter where history_id = 1 and number = 2), 1
+),
+(
+    "Se rendre à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number = 63),
+    (select id from chapter where history_id = 1 and number = 6), 2
+),
+
+-- Acte 1 — Chapitre 4 — Orsik Pioche d’Argent
+(
+    "Retourner dans l'entrée de l’école",
+    (select id from chapter where history_id = 1 and number = 4),
+    (select id from chapter where history_id = 1 and number = 15), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 4),
+    (select id from chapter where history_id = 1 and number = 2), 2
 );
