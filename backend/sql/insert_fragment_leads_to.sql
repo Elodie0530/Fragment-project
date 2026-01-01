@@ -53,14 +53,14 @@ INSERT INTO lead_to (action, start_id, end_id) VALUES
 
 INSERT INTO lead_to (action, start_id, end_id, position) VALUES
 
--- Acte 1 — Chapitre 1 — Carte départ
+-- Acte 1 — Chapitre 1 — Carte de la région d'Onenta-aux-Mines (départ)
 (
     "La place de la fontaine",
     (select id from chapter where history_id = 1 and number = 1),
     (select id from chapter where history_id = 1 and number = 2), 1
 ),
 
--- Acte 1 — Chapitre 2 — Place de la fontaine
+-- Acte 1 — Chapitre 2 — La place de la fontaine
 (
     "Aller à l’auberge Duergar",
     (select id from chapter where history_id = 1 and number = 2),
@@ -116,7 +116,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 55), 4
 ),
 
--- Acte 1 — Chapitre 3 — Serveur
+-- Acte 1 — Chapitre 3 — Le serveur
 (
     "Retourner dans l'entrée de l’auberge",
     (select id from chapter where history_id = 1 and number = 3),
@@ -128,7 +128,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 2), 2
 ),
 
--- Acte 1 — Chapitre 49 — Client attablé
+-- Acte 1 — Chapitre 49 — Un client attablé
 (
     "Retourner dans l'entrée de l’auberge",
     (select id from chapter where history_id = 1 and number = 49),
@@ -140,7 +140,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 2), 2
 ),
 
--- Acte 1 — Chapitre 27 — Client au bar
+-- Acte 1 — Chapitre 27 — Un client au bar
 (
     "Retourner dans l'entrée de l’auberge",
     (select id from chapter where history_id = 1 and number = 27),
@@ -152,7 +152,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 2), 2
 ),
 
--- Acte 1 — Chapitre 55 — Aubergistes
+-- Acte 1 — Chapitre 55 — Les aubergistes
 (
     "Retourner dans l'entrée de l’auberge",
     (select id from chapter where history_id = 1 and number = 55),
@@ -164,7 +164,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 2), 2
 ),
 
--- Acte 1 — Chapitre 22 — L'École du village
+-- Acte 1 — Chapitre 22 — L'école du village
 (
     "Entrer dans l’école",
     (select id from chapter where history_id = 1 and number = 22),
@@ -338,7 +338,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 2), 2
 ),
 
--- Acte 1 — Chapitre 36 — Achat bijou
+-- Acte 1 — Chapitre 36 — Achat d'un bijou
 (
     "Revenir place de la fontaine",
     (select id from chapter where history_id = 1 and number = 36),
