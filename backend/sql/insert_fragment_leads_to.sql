@@ -261,4 +261,103 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "Revenir place de la fontaine",
     (select id from chapter where history_id = 1 and number = 4),
     (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 33 — La bijouterie
+(
+    "Entrer dans la bijouterie",
+    (select id from chapter where history_id = 1 and number = 33),
+    (select id from chapter where history_id = 1 and number = 25), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 33),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+(
+    "Se rendre à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number = 33),
+    (select id from chapter where history_id = 1 and number = 6), 3
+),
+
+-- Acte 1 — Chapitre 25 — Entrer dans la bijouterie, parler avec
+(
+    "Le vigile",
+    (select id from chapter where history_id = 1 and number = 25),
+    (select id from chapter where history_id = 1 and number = 5), 1
+),
+(
+    "Des clients",
+    (select id from chapter where history_id = 1 and number = 25),
+    (select id from chapter where history_id = 1 and number = 17), 2
+),
+(
+    "Un vendeur",
+    (select id from chapter where history_id = 1 and number = 25),
+    (select id from chapter where history_id = 1 and number = 41), 3
+),
+(
+    "Tharadin Emérhalde",
+    (select id from chapter where history_id = 1 and number = 25),
+    (select id from chapter where history_id = 1 and number = 13), 4
+),
+
+-- Acte 1 — Chapitre 5 — Le vigile
+(
+    "Retourner dans l'entrée de la bijouterie",
+    (select id from chapter where history_id = 1 and number = 5),
+    (select id from chapter where history_id = 1 and number = 25), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 5),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 17 — Des clients bijouterie
+(
+    "Retourner dans l'entrée de la bijouterie",
+    (select id from chapter where history_id = 1 and number = 17),
+    (select id from chapter where history_id = 1 and number = 25), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 17),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 41 — Un vendeur
+(
+    "Oui",
+    (select id from chapter where history_id = 1 and number = 41),
+    (select id from chapter where history_id = 1 and number = 36), 1
+),
+(
+    "Non",
+    (select id from chapter where history_id = 1 and number = 41),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 1 — Chapitre 36 — Achat bijou
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 36),
+    (select id from chapter where history_id = 1 and number = 2), 1
+),
+(
+    "Se rendre à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number = 36),
+    (select id from chapter where history_id = 1 and number = 6), 2
+),
+
+-- Acte 1 — Chapitre 13 — Tharadin Emérhalde
+(
+    "Retourner dans l'entrée de la bijouterie",
+    (select id from chapter where history_id = 1 and number = 13),
+    (select id from chapter where history_id = 1 and number = 25), 1
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 13),
+    (select id from chapter where history_id = 1 and number = 2), 2
 );

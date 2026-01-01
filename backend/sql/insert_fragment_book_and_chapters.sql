@@ -350,6 +350,156 @@ Aujourd’hui, cette mine est abandonnée, car elle est instable et trop dangere
 ",
 "/fragment/ecole/ecole_orsik.jpg",
 "Un nain en tenue d'apparat de mineur se tient seul au milieu d’une salle de classe vide. 
-Sur le tableau, des croquis de cristaux à différentes étapes sont dessinés, accompagnés des mots : “lumière”, “sceau”, “corruption” et “destruction” inscrits à côté.");
+Sur le tableau, des croquis de cristaux à différentes étapes sont dessinés, accompagnés des mots : “lumière”, “sceau”, “corruption” et “destruction” inscrits à côté."),
 
 -- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 1 — Chapitre 33 — La bijouterie
+(1,
+"La bijouterie",
+false,
+33,
+false,
+"La bijouterie de Tharadin Emérhalde, chef de la guilde des joailliers-bijoutiers, est un commerce imposant de plusieurs étages, ayant pignon sur rue. 
+Sa devanture est ornée de splendides incrustations de joyaux qui captent la lumière naturelle, modifiant ainsi leurs couleurs et sublimant davantage leurs éclats. 
+
+Que faites-vous ?
+",
+
+"La bijouterie de Tharadin Emérhalde, chef de la guilde des joailliers-bijoutiers, est un commerce imposant de plusieurs étages, ayant pignon sur rue. 
+Sa devanture est ornée de splendides incrustations de joyaux qui vibrent sous la lumière, modifiant ainsi leurs couleurs et sublimant davantage leurs éclats. 
+
+Que faites-vous ?
+",
+"/fragment/bijouterie/bijouterie.jpg",
+"Belle façade incrustée de joyaux, avec le nom de Tharadin Emérhalde inscrit au-dessus de la porte vitrée."),
+
+-- Acte 1 — Chapitre 25 — Entrer dans la bijouterie, parler avec
+(1,
+"Entrer dans la bijouterie, parler avec",
+false,
+25,
+false,
+"Vous entrez dans la bijouterie et êtes immédiatement frappé par l’éclat des bagues, bracelets, colliers et parures d’une qualité exceptionnelle. 
+Certains bijoux sont simplement accrochés aux murs, tandis que d’autres sont exposés sur des mannequins, ou protégés sous des présentoirs vitrés pour les pièces les plus raffinées.
+Vous avez le choix entre discuter avec le vigile, des clients, l’un des vendeurs présents ou le propriétaire Monsieur Tharadin Emérhalde.
+
+Avec qui souhaitez-vous parler ?
+",
+
+"Vous entrez dans la bijouterie, et avez un étrange sentiment de déjà-vu, comme si ce lieu vous attendait. 
+Vous êtes frappé par l’éclat de la marchandise d’une qualité exceptionnelle. 
+Certains bijoux sont simplement accrochés aux murs, tandis que d’autres sont exposés sur des mannequins, ou protégés sous des présentoirs vitrés pour les pièces les plus raffinées. Cette opulence vous donne une sensation de vertige.
+Vous avez le choix entre discuter avec le vigile, des clients, l’un des vendeurs présents ou le propriétaire Monsieur Tharadin Emérhalde.
+
+Avec qui souhaitez-vous parler ?
+",
+"/fragment/entrer_parler.jpg",
+"Porte voutée ouverte, lumière orangée de l’autre côté du seuil. Invitant à entrer."),
+
+-- Acte 1 — Chapitre 5 — Le vigile
+(1,
+"Le vigile",
+false,
+5,
+false,
+"Un vigile se tient droit comme un piquet dans une immense salle. 
+
+“Mon rôle est essentiel, la marchandise est précieuse. Ceci dit, certaines pièces ont une drôle d’influence sur les gens. Vous n’imaginez pas ce que j’ai déjà vu ici… Mais chut, pas un mot. Je tiens à garder mon travail.”
+",
+
+NULL,
+"/fragment/bijouterie/bijoux_vigile.jpg",
+"Grande salle arrondie, les rayons du soleil passent par des hautes fenêtres en vitrail. 
+Un vigile en uniforme se tient seul dans la pièce, entouré de bijoux soit dans des présentoirs sous verre ou sur des bustes."),
+
+-- Acte 1 — Chapitre 17 — Des clients bijouterie
+(1,
+"Des clients",
+false,
+17,
+false,
+"Un couple rassemblé autour d’un présentoir vitré.
+
+La cliente, émerveillée : 
+“Je suis toujours ravie de mes achats. C’est un fin travail d'orfèvrerie, ces pièces sont magnifiques ! Elles me siéent à ravir.”
+
+Son compagnon, bien moins enthousiaste, qui se contente de régler la note : 
+“J’ai entendu une légende sur un homme qui conservait un anneau d’une rare beauté. Il croyait le posséder, mais au final, c’est lui qui était possédé, l’objet l’appelait, l’obsédait au point de le consumer à petit feu... Je suppose que certaines richesses ne sont pas faites pour être portées.”
+",
+
+NULL,
+"/fragment/bijouterie/bijoux_clients.jpg",
+"Grande pièce avec des boiseries et des rosaces en vitrail. 
+Comporte des bijoux dans des vitrines avec beaucoup de clientes qui les observent."),
+
+-- Acte 1 — Chapitre 41 — Un vendeur
+(1,
+"Un vendeur",
+false,
+41,
+false,
+"L’un des vendeurs s’approche avec un sourire assuré et un regard scrutateur : 
+
+“Puis-je vous être utile ? 
+Avec mon expertise, je suis certain que nous avons ici la pièce qui saura vous sublimer. 
+Nos créations, issues des riches mines alentour, sont d’une qualité exceptionnelle, et vraiment très accessibles à toutes les bourses. 
+Trouvons ensemble celle qui vous conviendra le mieux. 
+Regardez, celle-ci, par exemple, elle mettrait en valeur vos traits à la perfection”
+
+Souhaitez-vous en acquérir une ?
+",
+
+NULL,
+"/fragment/bijouterie/bijoux_vendeur.jpg",
+"Dans une partie de la boutique, un vendeur aux cheveux blonds en pétards et une petite barbichette. 
+Recouvert de colliers, vous présente un bijou serti, au milieu des présentoirs."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 1 — Chapitre 36 — Achat bijou
+(1,
+"Achat bijou",
+false,
+36,
+true,
+NULL,
+
+"Le bijou serti de cristaux que vous venez d’acquérir vibre doucement entre vos doigts, son éclat semblant pulser au rythme de votre propre cœur. 
+Une chaleur étrange se diffuse contre votre peau, et un frisson vous parcourt alors qu’une voix douce, mais irrésistible, s’insinue dans votre esprit.
+
+“Viens… viens me chercher à la bourse aux minéraux. Tu sauras me reconnaître. N’aie pas peur… 
+Ensemble, nous accomplirons de grandes choses. La fortune, la gloire, le respect, tout sera à toi. 
+Ce destin t’attend déjà, il te suffit d’un choix.”
+
+L’écho de ces mots résonne en vous, persistant, comme un murmure insistant que vous ne parvenez pas à chasser entièrement de votre esprit. 
+Vous sentez la tentation grandir en vous, comme si chaque instant passé sans suivre cette voix vous éloignait d’une destinée extraordinaire.
+",
+"/fragment/bijouterie/bijou_achat.jpg",
+"Un bijou serti repose au creux d’une main gauche ouverte. 
+La monture est incrustée de cristaux rouges et ornée de trois nacres bleutées suspendues. 
+La pierre centrale est constituée d’une nacre irisée aux reflets bleus, contenant en son centre un fragment en forme de branche."),
+
+-- Acte 1 — Chapitre 13 — Tharadin Emérhalde
+(1,
+"Tharadin Emérhalde",
+false,
+13,
+false,
+"Tharadin Emérhalde, maître joaillier reconnu, examine une pierre à la loupe. 
+À votre approche, il relève la tête et esquisse un sourire mesuré, précis, comme chacun de ses gestes.
+
+“Ah... un regard affûté, voilà qui me plaît. Vous savez, l’art de la joaillerie ne se limite pas à l’éclat d’une pierre ou à la finesse de son sertissage. Ce qui importe, c’est l’histoire qu’elle raconte, l’influence qu’elle exerce sur celui qui la porte… Certaines pierres sont imprégnées d’énergies singulières. Elles viennent du fond des âges, vous savez.” 
+
+Il repose délicatement la gemme qu’il observait, et marque une pause.
+“Tenez, il y a bien longtemps, certains bijoux n’étaient pas seulement des ornements … mais des symboles de pouvoir, d’obsession. On dit même que certains ont façonné des destins, pour le meilleur... ou pour le pire.”
+
+Son regard s’attarde un instant sur vous, puis un léger rire lui échappe. 
+“Mais enfin, ce ne sont que de vieilles légendes… après tout, une pierre n’est qu’une pierre, même si elles ont traversé les siècles, n’est-ce pas ?” 
+",
+
+NULL,
+"/fragment/bijouterie/bijoutier_tharadin.jpg",
+"Au milieu des étagères de pierres taillées se tient Tharadin Emérhalde. 
+Les cheveux blonds en arrière avec une barbe et une moustache, il vous regarde de ses grands yeux verts. 
+Il porte des colliers et des bracelets.");
