@@ -16,6 +16,10 @@ INSERT INTO chapter (id, title, is_first, text_normal, history_id, number, image
 
 INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
 
+-- ==========
+-- ACTE 1 - LA MISSION
+-- ==========
+
 -- Acte 1 — Chapitre 1 — Carte de la région d'Onenta-aux-Mines (départ)
 (1,
 "Carte de la région d'Onenta-aux-Mines",
@@ -43,7 +47,7 @@ Un mal inconnu ronge-t-il la ville ? Est-ce une simple épidémie… ou quelque 
 Si oui, cliquez sur le bouton ci-dessous qui vous permettra de naviguer entre les chapitres.
 ",
 NULL,
-"/fragment/carte_depart.jpg",
+"/fragment/acte_1/carte_depart.jpg",
 "Carte du secteur de jeu comme décrit dans le texte attenant."),
 
 -- Acte 1 — Chapitre 2 — La place de la fontaine
@@ -70,7 +74,7 @@ Autour, l’auberge historique “Bretzel Duergar”, l’école du village et l
 
 Où souhaitez-vous vous rendre ?
 ",
-"/fragment/place_fontaine.jpg",
+"/fragment/acte_1/place_fontaine.jpg",
 "Place du village avec au centre, une fontaine incrustée de joyaux surmontée d’une statue et des bâtiments ainsi que des stands de marchands ambulants autour."),
 
 -- Acte 1 — Chapitre 11 — L’Auberge Duergar
@@ -92,7 +96,7 @@ Aux beaux jours, sa petite terrasse invite à la détente.
 
 Que faites-vous ?
 ",
-"/fragment/auberge/auberge_duergar.jpg",
+"/fragment/acte_1/auberge/auberge_duergar.jpg",
 "Vue extérieure de l’auberge en pierre rustique “Bretzel Duergar”, illuminée de lanternes.
 Elle possède une cour pavée et quelques tables ombragées par un arbre."),
 
@@ -118,7 +122,7 @@ La pièce semble se refermer légèrement sur vous, comme si l’air se faisait 
 
 À qui souhaitez-vous parler ?
 ",
-"/fragment/entrer_parler.jpg",
+"/fragment/acte_1/entrer_parler.jpg",
 "Porte voutée ouverte, lumière orangée de l’autre côté du seuil. Invitant à entrer."),
 
 -- Acte 1 — Chapitre 3 — Le serveur
@@ -134,7 +138,7 @@ Que faites-vous ?
 ",
 
 NULL,
-"/fragment/auberge/auberge_serveur.jpg",
+"/fragment/acte_1/auberge/auberge_serveur.jpg",
 "Intérieur de l’auberge en bois. Des clients sont assis à table ou au bar.
 Un serveur arrive face à vous en courant."),
 
@@ -157,7 +161,7 @@ Puis hausse les épaules et continue de manger.
 ",
 
 NULL,
-"/fragment/auberge/auberge_table_client.jpg",
+"/fragment/acte_1/auberge/auberge_table_client.jpg",
 "Un homme seul attablé, tenant une bretzel dans une main."),
 
 -- Acte 1 — Chapitre 27 — Un client au bar
@@ -176,7 +180,7 @@ Il hoche la tête, satisfait, et se détourne pour interpeller le serveur.
 ",
 
 NULL,
-"/fragment/auberge/auberge_bar_client.jpg",
+"/fragment/acte_1/auberge/auberge_bar_client.jpg",
 "Homme barbu accoudé au comptoir du bar, un verre à la main."),
 
 -- Acte 1 — Chapitre 55 — Les aubergistes
@@ -198,7 +202,7 @@ Pensez-vous pouvoir faire quelque chose ?”
 ",
 
 NULL,
-"/fragment/auberge/aubergistes.jpg",
+"/fragment/acte_1/auberge/aubergistes.jpg",
 "Le couple d’aubergistes souriant, Bicar à gauche ayant une barbe en forme de bretzel.
 Sa femme Mauricette à droite porte une robe avec des cheveux longs."),
 
@@ -225,7 +229,7 @@ Une petite ritournelle vous trotte dans la tête : “Et bla, bla, bla, il n’y
 
 Que faites-vous ?
 ",
-"/fragment/ecole/ecole.jpg",
+"/fragment/acte_1/ecole/ecole.jpg",
 "Le bâtiment de l’école du village est à deux étages, avec des colombages et surmonté d’une verrière sur le toit.
 Il est entouré d’un chemin pavé ainsi que d’espaces verts bien entretenus."),
 
@@ -249,7 +253,7 @@ Vous pouvez profiter de ce moment pour parler au professeur, discuter avec les �
 
 À présent, plusieurs options s’offrent à vous :
 ",
-"/fragment/entrer_parler.jpg",
+"/fragment/acte_1/entrer_parler.jpg",
 "Porte voutée ouverte, lumière orangée de l’autre côté du seuil. Invitant à entrer."),
 
 -- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
@@ -275,7 +279,7 @@ Un murmure imperceptible s’ajoute à ses paroles, un écho ténu dans votre es
 
 “Aujourd’hui, nous avons la chance d’accueillir Monsieur Pioche d’Argent, chef de la guilde des mineurs. Ancien mineur lui-même, il est idéal pour expliquer la complexité du règne minéral.”
 ",
-"/fragment/ecole/ecole_professeur.jpg",
+"/fragment/acte_1/ecole/ecole_professeur.jpg",
 "Dans la cour de l’école, le professeur se tient au premier plan, tandis que des enfants jouent devant le bâtiment scolaire."),
 
 -- Acte 1 — Chapitre 19 — Les élèves
@@ -313,7 +317,7 @@ Un autre enfant renchérit d’un ton sérieux :
 
 Le groupe hoche la tête d’un air entendu, et repartent jouer.
 ",
-"/fragment/ecole/ecole_eleves.jpg",
+"/fragment/acte_1/ecole/ecole_eleves.jpg",
 "Dans la cour de l’école, des élèves jouent, tandis qu’un petit groupe d’enfants curieux entoure un aventurier encapuchonné, sous la surveillance d’un professeur légèrement en retrait."),
 
 -- Acte 1 — Chapitre 54 — La tombola
@@ -341,7 +345,7 @@ Et qui sait, peut-être aurez-vous la main chanceuse aujourd’hui… “Je suis
 
 Voulez-vous tenter ?
 ",
-"/fragment/ecole/ecole_tombola.jpg",
+"/fragment/acte_1/ecole/ecole_tombola.jpg",
 "Dans une immense salle ayant des vitraux au plafond, se trouve au centre de la pièce, une grande roue avec des segments de couleur en alternance.
 Sur le côté gauche de la pièce, il y a un présentoir qui déborde de bijoux étincelants.
 Sur le côté droit, des tissus somptueux, étoffes brodées, rouleaux de soie et de velours."),
@@ -360,7 +364,7 @@ NULL,
 
 L’écho de ces mots résonne en vous, persistant, comme un murmure insistant que vous ne parvenez pas à chasser entièrement de votre esprit. Vous sentez la tentation grandir en vous, comme si chaque instant passé sans suivre cette voix vous éloignait d’un destin extraordinaire.
 ",
-"/fragment/ecole/ecole_gain.jpg",
+"/fragment/acte_1/ecole/ecole_gain.jpg",
 "Un pendentif en forme de losange, orné de billes à chaque angle.
 Il renferme une nacre aux reflets bleus, avec un fragment tel une arborescence à l’intérieur."),
 
@@ -385,7 +389,7 @@ Pour la première fois, le tout 1er cristal d’argent extrait par mes ancêtres
 
 Aujourd’hui, cette mine est abandonnée, car elle est instable et trop dangereuse. Une inscription gravée au-dessus de l’autel a été en partie effacée avec le temps, les seuls mots qui en subsistent sont : “lumière”, “sceau”, “corruption” et “destruction”. Personne ne sait exactement ce que cela signifie… Une mise en garde ? Des foutaises ? Certains pensent que c’est juste une superstition de mineurs fatigués. Mais d’autres savent que certaines vérités ne doivent pas être oubliées.”
 ",
-"/fragment/ecole/ecole_orsik.jpg",
+"/fragment/acte_1/ecole/ecole_orsik.jpg",
 "Un nain en tenue d'apparat de mineur se tient seul au milieu d’une salle de classe vide.
 Sur le tableau, des croquis de cristaux à différentes étapes sont dessinés, accompagnés des mots : “lumière”, “sceau”, “corruption” et “destruction” inscrits à côté."),
 
@@ -410,7 +414,7 @@ Sa devanture est ornée de splendides incrustations de joyaux qui vibrent sous l
 
 Que faites-vous ?
 ",
-"/fragment/bijouterie/bijouterie.jpg",
+"/fragment/acte_1/bijouterie/bijouterie.jpg",
 "Belle façade incrustée de joyaux, avec le nom de Tharadin Emérhalde inscrit au-dessus de la porte vitrée."),
 
 -- Acte 1 — Chapitre 25 — Entrer dans la bijouterie, parler avec
@@ -437,7 +441,7 @@ Vous avez le choix entre discuter avec le vigile, des clients, l’un des vendeu
 
 Avec qui souhaitez-vous parler ?
 ",
-"/fragment/entrer_parler.jpg",
+"/fragment/acte_1/entrer_parler.jpg",
 "Porte voutée ouverte, lumière orangée de l’autre côté du seuil. Invitant à entrer."),
 
 -- Acte 1 — Chapitre 5 — Le vigile
@@ -452,7 +456,7 @@ false,
 ",
 
 NULL,
-"/fragment/bijouterie/bijoux_vigile.jpg",
+"/fragment/acte_1/bijouterie/bijoux_vigile.jpg",
 "Grande salle arrondie, traversée par les rayons du soleil filtrant à travers de hautes fenêtres en vitrail.
 Un vigile en uniforme se tient seul dans la pièce, entouré de bijoux exposés soit dans des présentoirs sous verre, soit sur des bustes."),
 
@@ -472,7 +476,7 @@ Son compagnon, bien moins enthousiaste, qui se contente de régler la note :
 ",
 
 NULL,
-"/fragment/bijouterie/bijoux_clients.jpg",
+"/fragment/acte_1/bijouterie/bijoux_clients.jpg",
 "Grande pièce avec des boiseries et des rosaces en vitrail.
 Comporte des bijoux dans des vitrines avec beaucoup de clientes qui les observent."),
 
@@ -494,7 +498,7 @@ Souhaitez-vous en acquérir une ?
 ",
 
 NULL,
-"/fragment/bijouterie/bijoux_vendeur.jpg",
+"/fragment/acte_1/bijouterie/bijoux_vendeur.jpg",
 "Dans une partie de la boutique, un vendeur aux cheveux blonds en pétards et une petite barbichette. 
 Recouvert de colliers, vous présente un bijou serti, au milieu des présentoirs."),
 
@@ -518,7 +522,7 @@ Ce destin t’attend déjà, il te suffit d’un choix.”
 L’écho de ces mots résonne en vous, persistant, comme un murmure insistant que vous ne parvenez pas à chasser entièrement de votre esprit.
 Vous sentez la tentation grandir en vous, comme si chaque instant passé sans suivre cette voix vous éloignait d’une destinée extraordinaire.
 ",
-"/fragment/bijouterie/bijou_achat.jpg",
+"/fragment/acte_1/bijouterie/bijou_achat.jpg",
 "Un bijou serti repose au creux d’une main gauche ouverte.
 La monture est incrustée de cristaux rouges et ornée de trois nacres bleutées suspendues.
 La pierre centrale est constituée d’une nacre irisée aux reflets bleus, contenant en son centre un fragment en forme de branche."),
@@ -542,7 +546,11 @@ Son regard s’attarde un instant sur vous, puis un léger rire lui échappe.
 ",
 
 NULL,
-"/fragment/bijouterie/bijoutier_tharadin.jpg",
+"/fragment/acte_1/bijouterie/bijoutier_tharadin.jpg",
 "Au milieu des étagères de pierres taillées se tient Tharadin Emérhalde.
 Les cheveux blonds en arrière avec une barbe et une moustache, il vous regarde de ses grands yeux verts.
 Il porte des colliers et des bracelets.");
+
+-- ==========
+-- ACTE 2 - LA BOURSE AUX MINERAUX
+-- ==========
