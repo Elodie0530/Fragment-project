@@ -549,8 +549,257 @@ NULL,
 "/fragment/acte_1/bijouterie/bijoutier_tharadin.jpg",
 "Au milieu des étagères de pierres taillées se tient Tharadin Emérhalde.
 Les cheveux blonds en arrière avec une barbe et une moustache, il vous regarde de ses grands yeux verts.
-Il porte des colliers et des bracelets.");
+Il porte des colliers et des bracelets."),
 
 -- ==========
 -- ACTE 2 - LA BOURSE AUX MINERAUX
 -- ==========
+
+-- Acte 2 — Chapitre 6 — Se rendre à la bourse aux minéraux
+(1,
+"Se rendre à la bourse aux minéraux",
+false,
+6,
+false,
+"Aventuriers, vous vous apprêtez à vous rendre à la manifestation annuelle de la bourse aux minéraux.
+
+C’est par ici.
+",
+
+"Aventuriers, vous vous apprêtez à vous rendre à la manifestation annuelle de la bourse aux minéraux.
+
+C’est par ici.
+
+“Oh oui, viens, viens, Aventuriers, je t’attends depuis longtemps.”
+L’air devient soudainement plus lourd, chaque pas que vous faites semble résonner plus fort dans votre esprit.
+La voix murmure encore, plus proche, plus pressante.
+",
+"/fragment/acte_2/se_rendre_bourse.jpg",
+"Un panneau indiquant la direction d’un passage voûté, portant l’inscription “Bourse aux minéraux par ici”."),
+
+-- Acte 2 — Chapitre 8 — Assez d’indices
+(1,
+"Assez d’indices",
+false,
+8,
+false,
+"Pensez-vous avoir réuni suffisamment d’indices afin de rejoindre la bourse aux minéraux ?
+",
+
+"Pensez-vous avoir réuni suffisamment d’indices afin de rejoindre la bourse aux minéraux ?
+
+“Évidemment, tu m’a moi... suis ce que je te conseille et tout ira bien. Ne doute pas, n’hésite pas.”
+La voix semble se glisser dans chaque recoin de votre esprit, vous donnant mal à la tête.
+
+Une certitude, vous ne pouvez plus ignorer que l’instant de la décision approche, il n’y aura bientôt plus de retour en arrière possible.
+",
+"/fragment/acte_2/assez_indices.jpg",
+"Un panneau comprenant cette inscription “Avez-vous suffisamment d'indices” est suspendu sous un passage voûté.
+De l’autre côté, quelques personnes s’éloignent."),
+
+-- Acte 2 — Chapitre 10 — La bourse aux minéraux
+(1,
+"La bourse aux minéraux",
+false,
+10,
+false,
+"Les fifres et tambours résonnent dans l’air, guidant vos pas au rythme de leurs mélodies.
+
+Vous voilà plongé dans la rue principale, cœur battant de la manifestation.
+
+Au centre de la foule, vous apercevez Kathéra Ribeaupierre, la matriarche de la ville, se tenant près d’un objet mystérieusement voilé.
+
+Non loin de là, le regard insistant d’un inconnu énigmatique en marge de la foule vous transperce.
+
+Que faites-vous ?
+",
+
+"Les fifres et tambours résonnent dans l’air, guidant vos pas au rythme de leurs mélodies.
+
+Vous voilà plongé dans la rue principale, cœur battant de la manifestation.
+Vous avez un étrange sentiment de déjà-vu, comme si ce lieu vous attendait.
+Un instant, vous croyez entendre votre nom soufflé par le vent, mais ce n’est qu’une illusion, n’est-ce pas ?
+
+Au centre de la foule, vous apercevez Kathéra Ribeaupierre, la matriarche de la ville, se tenant près d’un objet mystérieusement voilé.
+
+Non loin de là, le regard insistant d’un inconnu énigmatique en marge de la foule vous transperce.
+
+Que faites-vous ?
+",
+"/fragment/acte_2/bourse_aux_mineraux.jpg",
+"Au cœur d’une foule dense dans une rue en fête, une estrade entourée de gardes se dresse au centre.
+Sur celle-ci se tient Kathéra Ribeaupierre, près d’un objet lumineux recouvert d’un voile serti de cristaux.
+À l'écart de la foule, se trouve un inconnu encapuchonné qui vous observe."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 2 — Chapitre 62 — Kathéra Ribeaupierre
+(1,
+"Kathéra Ribeaupierre",
+false,
+62,
+false,
+"Les musiciens cessent peu à peu de jouer, laissant place à Kathéra Ribeaupierre, la matriarche d’Onenta-aux-Mines.
+
+D’un regard assuré, elle balaie la foule, puis, d’une voix claire et solennelle, s’adresse à l’assemblée :
+ 
+“Mes très chers concitoyens, et amis des royaumes voisins.
+Vous avez parcouru de grands chemins pour venir jusqu’ici.
+Je suis heureuse de vous accueillir dans notre ville, pour une nouvelle édition de notre bourse aux minéraux annuelle.
+En cette année si particulière pour notre cité, je suis honorée de pouvoir vous présenter ce qui nous réunit aujourd’hui, voici le tout premier cristal d’argent extrait de la première mine découverte il y a de cela cinq siècles.
+C’est une relique d’une valeur inestimable.
+Profitez de cet événement, n’hésitez pas à aller visiter la ville et à vous désaltérer à la taverne avec nos produits locaux.”
+
+Elle marque une courte pause, puis d’un geste, retire le voile qui recouvrait le fragment de cristal d’argent.
+
+Le minéral capte et réfracte les éclats du jour, projetant de délicats reflets argentés autour de lui.
+L’espace d’un instant, un étrange frisson vous parcourt, une sensation fugace, difficile à décrire.
+
+L’assistance, fascinée, retient son souffle un instant, impressionnée par la beauté de la relique.
+",
+
+"Les musiciens cessent peu à peu de jouer, laissant place à Kathéra Ribeaupierre, la matriarche d’Onenta-aux-Mines.
+
+D’un regard assuré, elle balaie la foule, puis, d’une voix claire et solennelle, s’adresse à l’assemblée :
+ 
+“Mes très chers concitoyens, et amis des royaumes voisins.
+Vous avez parcouru de grands chemins pour venir jusqu’ici.
+Je suis heureuse de vous accueillir dans notre ville, pour une nouvelle édition de notre bourse aux minéraux annuelle.
+En cette année si particulière pour notre cité, je suis honorée de pouvoir vous présenter ce qui nous réunit aujourd’hui, voici le tout premier cristal d’argent extrait de la première mine découverte il y a de cela cinq siècles.
+C’est une relique d’une valeur inestimable.
+Profitez de cet événement, n’hésitez pas à aller visiter la ville et à vous désaltérer à la taverne avec nos produits locaux.”
+
+Elle marque une courte pause, puis d’un geste, retire le voile qui recouvrait le fragment de cristal d’argent.
+
+Le minéral capte et réfracte les éclats du jour, projetant de délicats reflets argentés autour de lui.
+L’espace d’un instant, un étrange frisson vous parcourt, une sensation fugace, difficile à décrire.
+“Enfin, tu peux me voir… approche” reprend la voix dans votre esprit.
+
+L’assistance, fascinée, retient son souffle un instant, impressionnée par la beauté de la relique.
+",
+"/fragment/acte_2/image_non_definie.jpg",
+"Illustration non définie pour ce chapitre"),
+
+-- Acte 2 — Chapitre 56 — Un inconnu énigmatique (=> Vol bourse)
+(1,
+"Un inconnu énigmatique",
+false,
+56,
+false,
+"Un individu de haute stature, en retrait de la foule, vous observe très attentivement.
+Son regard perçant semble sonder vos intentions.
+
+Drapé dans un long manteau de fourrure, il s’approche silencieusement et murmure :
+
+“Le cristal ne devrait pas rester ici.
+Apportez-le-nous, et nous saurons vous récompenser.
+Une belle somme d’argent… ou un service qui pourrait vous être utile.”
+
+Sa voix a quelque chose d’étrange, comme si plusieurs personnes parlaient en même temps, cependant l’agitation ambiante de la manifestation vous empêche d’en être certain.
+
+L’individu encapuchonné reste immobile, attendant votre réponse.
+
+Que décidez-vous ?
+",
+
+NULL,
+"/fragment/acte_2/image_non_definie.jpg",
+"Illustration non définie pour ce chapitre"),
+
+-- Acte 2 — Chapitre 44 — Accepter le vol (=> Fragment bourse)
+(1,
+"Accepter le vol",
+false,
+44,
+false,
+"Le cristal repose sur un socle serti de joyaux, légèrement surélevé.
+
+Autour, la foule vaque à ses occupations, discutant ensemble, ou se pressant devant les nombreux étals des marchands.
+Non loin, les gardes discutent entre eux en prenant un café.
+
+Personne ne semble vraiment vous prêter attention.
+Vous vous approchez doucement, l’air de rien, attiré par cette relique inestimable.
+
+Puis, d’un geste sûr, presque naturel, vous tendez la main, et refermez vos doigts dessus.
+Vous venez de le prendre.
+
+Et maintenant ?
+",
+
+"Le cristal repose sur un socle serti de joyaux, légèrement surélevé.
+
+Autour, la foule vaque à ses occupations, discutant ensemble, ou se pressant devant les nombreux étals des marchands.
+Non loin, les gardes discutent entre eux en prenant un café.
+
+Personne ne semble vraiment vous prêter attention.
+Vous vous avancez doucement, l’air de rien, irrémédiablement attiré par cette relique inestimable.
+Vous sentez le bijou que vous portez sur vous pulser de plus en plus vite, de plus en plus fort, à mesure que vous approchez du fragment. Résonnant au rythme d’un battement qui n’est pas le vôtre. Une chaleur étrange irradie de votre paume alors que vous vous approchez du fragment.
+Tout semble ralentir autour de vous.
+Les voix de la foule deviennent lointaines, étouffées, comme si vous étiez immergé sous l’eau. Seule cette pulsation demeure, intense, obsédante.
+
+Puis, d’un geste sûr, presque naturel, vous tendez la main, et refermez vos doigts dessus.
+Vous venez de le prendre.
+
+Et maintenant ?
+",
+"/fragment/acte_2/image_non_definie.jpg",
+"Illustration non définie pour ce chapitre"),
+
+-- Acte 2 — Chapitre 9 — Refuser le vol
+(1,
+"Refuser le vol",
+false,
+9,
+false,
+"Quelque chose d’indescriptible vous dérange dans l’attitude de cette personne.
+Vous décidez donc de refuser sa proposition.
+Un silence. Il vous fixe longuement, sans un mot.
+Puis disparaît, se fondant dans la foule comme s’il n’avait jamais été là.
+
+Pourtant, un curieux sentiment vous serre la gorge.
+Comme si une porte venait de se refermer, tout doucement derrière vous.
+Peut-être auriez-vous dû accepter… ou peut-être est-ce mieux ainsi.
+Il est communément admis que de mauvaises choses arrivent aux gens qui essayent de trop bien faire.
+
+En tout cas, c’est une jolie manifestation qui se déroule dans cette ville.
+",
+
+NULL,
+"/fragment/acte_2/refuser_vol_bourse.jpg",
+"Rue médiévale entourée de bâtiments avec des échoppes de part et d'autre sous un ciel gris.
+De dos, vous vous éloignez d’une personne dans un manteau à capuche."),
+
+-- Acte 2 — Chapitre 51 — Dénonciation garde
+(1,
+"Dénonciation garde",
+false,
+51,
+false,
+"Vous vous rendez auprès de la garde pour dénoncer cet inconnu.
+
+“Il n’y a pas eu d’incidents, que voulez-vous que l’on y fasse ?
+Allez, circulez et laissez-nous travailler.”
+
+Vous insistez, mais ils haussent les épaules, visiblement agacés.
+
+Derrière eux, la ville continue de vibrer au rythme de la fête, indifférente à vos inquiétudes.
+",
+
+"Vous vous rendez auprès de la garde pour dénoncer cet inconnu.
+
+”Il n’y a pas eu d’incidents, que voulez-vous que l’on y fasse ?
+Laissez-nous travailler.”
+
+Vous insistez, mais ils haussent les épaules, visiblement agacés.
+
+Derrière eux, la ville continue de vibrer au rythme de la fête, indifférente à vos inquiétudes.
+
+Puis, une voix s'immisce dans votre esprit :
+“Accepte donc ce que l’inconnu te propose… viens me chercher... je t’offrirai tout ce que tu désires…”
+
+Un frisson vous parcourt, tout semble légèrement vaciller autour de vous.
+Le bruit ambiant s’efface, ne laissant que cette promesse résonner en vous.
+",
+"/fragment/acte_2/denoncer_gardes.jpg",
+"Rue médiévale festive avec une foule qui s’attarde auprès des échoppes.
+Trois gardes en armures se tiennent au centre de celle-ci.");

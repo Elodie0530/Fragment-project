@@ -53,6 +53,10 @@ INSERT INTO lead_to (action, start_id, end_id) VALUES
 
 INSERT INTO lead_to (action, start_id, end_id, position) VALUES
 
+-- ==========
+-- ACTE 1 - LA MISSION
+-- ==========
+
 -- Acte 1 — Chapitre 1 — Carte de la région d'Onenta-aux-Mines (départ)
 (
     "La place de la fontaine",
@@ -360,4 +364,89 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "Revenir place de la fontaine",
     (select id from chapter where history_id = 1 and number = 13),
     (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- ==========
+-- ACTE 2 - LA BOURSE AUX MINERAUX
+-- ==========
+
+-- Acte 2 — Chapitre 6 — Se rendre à la bourse aux minéraux
+(
+    "Assez d’indices",
+    (select id from chapter where history_id = 1 and number = 6),
+    (select id from chapter where history_id = 1 and number = 8), 1
+),
+
+-- Acte 2 — Chapitre 8 — Assez d’indices
+(
+    "Oui",
+    (select id from chapter where history_id = 1 and number = 8),
+    (select id from chapter where history_id = 1 and number = 10), 1
+),
+(
+    "Non",
+    (select id from chapter where history_id = 1 and number = 8),
+    (select id from chapter where history_id = 1 and number = 2), 2
+),
+
+-- Acte 2 — Chapitre 10 — La bourse aux minéraux
+(
+    "Kathéra Ribeaupierre",
+    (select id from chapter where history_id = 1 and number = 10),
+    (select id from chapter where history_id = 1 and number = 62), 1
+),
+(
+    "Un inconnu énigmatique",
+    (select id from chapter where history_id = 1 and number = 10),
+    (select id from chapter where history_id = 1 and number = 56), 2
+),
+(
+    "Revenir place de la fontaine",
+    (select id from chapter where history_id = 1 and number = 10),
+    (select id from chapter where history_id = 1 and number = 2), 3
+),
+
+-- Acte 2 — Chapitre 62 — Kathéra Ribeaupierre
+(
+    "Revenir à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number = 62),
+    (select id from chapter where history_id = 1 and number = 10), 1
+),
+
+-- Acte 2 — Chapitre 56 — Un inconnu énigmatique (=> Vol bourse)
+(
+    "Accepter",
+    (select id from chapter where history_id = 1 and number = 56),
+    (select id from chapter where history_id = 1 and number = 44), 1
+),
+(
+    "Refuser",
+    (select id from chapter where history_id = 1 and number = 56),
+    (select id from chapter where history_id = 1 and number = 9), 2
+),
+(
+    "Le dénoncer à la garde",
+    (select id from chapter where history_id = 1 and number = 56),
+    (select id from chapter where history_id = 1 and number = 51), 3
+),
+
+-- Acte 2 — Chapitre 44 — Accepter le vol (=> Fragment bourse)
+(
+    "Et maintenant ?",
+    (select id from chapter where history_id = 1 and number = 44),
+    (select id from chapter where history_id = 1 and number = 57), 1
+),
+
+-- Acte 2 — Chapitre 9 — Refuser le vol
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 9),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 2 — Chapitre 51 — Dénonciation garde
+(
+    "Revenir à la bourse aux minéraux",
+    (select id from chapter where history_id = 1 and number = 51),
+    (select id from chapter where history_id = 1 and number = 10), 1
 );
