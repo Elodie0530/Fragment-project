@@ -802,4 +802,161 @@ Le bruit ambiant s’efface, ne laissant que cette promesse résonner en vous.
 ",
 "/fragment/acte_2/denoncer_gardes.jpg",
 "Rue médiévale festive avec une foule qui s’attarde auprès des échoppes.
-Trois gardes en armures se tiennent au centre de celle-ci.");
+Trois gardes en armures se tiennent au centre de celle-ci."),
+
+-- ==========
+-- ACTE 3 - LES CHOIX POUR LA FIN
+-- ==========
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 59 — Tout recommence
+-- (valable pour les chapitres : Refuser le vol (9), Pris de remords (53), Les Kobolds (58), Faire demi-tour (23), Obtempérer Sélémar (64), Se battre brigands (31), En joue milice (60))
+(1,
+"Tout recommence",
+false,
+59,
+false,
+"Aventurier, vous êtes resté là un moment, immobile, à repenser aux choix qui vous ont mené ici.
+
+Peut-être avez-vous échoué. Peut-être avez-vous réussi... ou peut-être que cela n’avait aucune importance.
+
+Une brise étrange vous frôle, comme un murmure dans l’air :
+”Ce n’est pas encore terminé”
+
+Et soudain, tout recommence.
+",
+
+"Aventurier, vous êtes resté là un moment, immobile, à repenser aux choix qui vous ont mené ici.
+
+Le fragment n’est plus entre vos mains.
+Mais son influence, elle, persiste.
+
+Peut-être avez-vous échoué. Peut-être avez-vous réussi... ou peut-être que cela n’avait aucune importance.
+
+Une brise étrange vous frôle, comme un murmure dans l’air :
+”Ce n’est pas encore terminé”
+
+Et soudain, tout recommence.
+",
+"/fragment/acte_3/tout_recommence.jpg",
+"Vous êtes seul sur une plaine de blé, en face des montagnes.
+Le ciel est nuageux, ils forment des cercles au-dessus de vous dans un dégradé de couleurs allant du bleu au rose en passant par du jaune."),
+
+-- Acte 3 — Chapitre 57 — Et maintenant ?
+(1,
+"Et maintenant ?",
+false,
+57,
+true,
+NULL,
+
+"Vous avez le fragment de cristal avec vous, personne ne vous a vu pour l’instant, trop occupés à vaquer à leurs occupations. Mais le vol de cette relique historique ne laissera personne indifférent très longtemps.
+
+Vous sentez le fragment palpiter entre vos mains comme si vous y teniez un cœur.
+Et entendez distinctement dans votre esprit :
+“Emmène-moi loin d’ici, ensemble nous allons conquérir le monde, tu seras riche et puissant.”
+
+Une chose est sûre, vous ne pourrez pas garder ce fragment longtemps sans que la foule ne vous voie.
+Une sensation de vertige ou de malaise vous étreint lors du contact avec le cristal :
+“Vous ressentez la tentation du pouvoir absolu, n’est-ce pas ? Une fois que l’on y a goûté, il est difficile de s’en détacher.”
+
+Et maintenant, où allez-vous ?
+Les choix se dressent devant vous, et chaque direction vous entraîne un peu plus loin dans l’inconnu…
+",
+"/fragment/acte_3/et_maintenant.jpg",
+"Des panneaux sur un piquet en bois à la sortie du village indiquent les directions possibles."),
+
+-- Acte 3 — Chapitre 53 — Pris de remords
+(1,
+"Pris de remords",
+false,
+53,
+false,
+NULL,
+
+"Retournant discrètement au centre de la place, vous replacez le fragment sur son socle, au cœur de la bourse aux minéraux. Le geste est précis, presque mécanique, comme si cela pouvait effacer ce qui a été fait. Mais au fond de vous, une question vous taraude, l’avez-vous réellement fait pour la bonne raison ?
+
+Peut-être que le vol était inexcusable. Peut-être que de rendre ce fragment est ce qu’il y a de mieux à faire. Mais en même temps, vous sentez une étrange attirance à ne pas abandonner ce pouvoir.
+
+Votre conscience vous murmure que l’on ne peut s’approprier une relique de cette importance.
+Il y a une part de lumière et d’ombre en chacun de nous. Ce qui compte, c’est celle que l’on choisit de montrer dans nos actes. Voilà ce que l’on est vraiment.
+
+Une part de vous se sent plus légère, l’autre plus lourde.
+Peut-être que vous avez fait le bon choix… ou peut-être pas…
+",
+"/fragment/acte_3/pris_de_remords.jpg",
+"Vous êtes seul, tête baissée, au milieu de la forêt avec des arbres décharnés, le soleil couchant vous éclaire."),
+
+-- Acte 3 — Chapitre 58 — Les Kobolds (= Le rapporter à l’inconnu)
+(1,
+"Les Kobolds",
+false,
+58,
+false,
+NULL,
+
+"Vous revenez à l’endroit où vous aviez rencontré l’inconnu.
+Lorsqu’il vous aperçoit, il sort lentement de l’ombre.
+Vous lui tendez le fragment, vous rappelant sa promesse : une belle somme d’argent ou un service utile.
+
+Un bruissement étrange se fait entendre sous son manteau.
+Soudain, le tissu glisse au sol, révélant… trois petits kobolds, empilés les uns sur les autres !
+D’un geste vif, ils s’emparent du fragment et détalent à toute vitesse, avant que vous ne puissiez réagir, disparaissant dans la foule avec leur butin…
+
+Avant de disparaître, l’un d’eux se retourne et vous lance avec un clin d'œil :
+“Merci bien ! Ce n’est pas une simple pierre, c’est un vestige d’une époque oubliée.
+Plus besoin de toi maintenant, tchao l’ami !”
+
+Vous restez planté là, sans argent, sans service… et surtout sans le fragment.
+
+Mais au moins, vous avez appris une chose : c’est de ne jamais faire confiance à une silhouette encapuchonnée dans une ruelle.
+",
+"/fragment/acte_3/kobolds.jpg",
+"Trois kobolds empilés les uns sur les autres sous un manteau, au premier plan d’une ruelle commerçante floue.
+Leurs têtes sont bien visibles, avec des museaux évoquant ceux de petits dragons, et ils sont couverts d’écailles rouges.
+Chacun affiche un sourire sournois."),
+
+-- Acte 3 — Chapitre 23 — Faire demi-tour
+-- (valable pour les chapitres : La mine (12), L'intérieur de la mine (14), L'autel (52), La prophétie (42), Les brigands (38), La milice d'Asterakie (48), La clairière (29))
+(1,
+"Faire demi-tour",
+false,
+23,
+false,
+NULL,
+
+"“Cette situation me fait beaucoup trop peur. Je m’en vais, et tant pis pour cette belle aventure.”
+
+Vous tournez les talons, le cœur battant, laissant derrière vous tout ce que vous auriez pu devenir... et bien plus encore.
+
+C’est votre choix.
+
+Le prix du pouvoir est parfois le même que celui de la liberté à savoir tout abandonner.
+",
+"/fragment/acte_3/demi_tour.jpg",
+"Panneau noir et blanc sale indiquant “demi-tour”."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 65 — C’est terminé
+(1,
+"C’est terminé",
+false,
+65,
+false,
+NULL,
+
+"Vous avez fait des choix tout au long de votre aventure, et celle-ci touche maintenant à sa fin.
+
+Peut-être avez-vous sauvé ce monde, ou peut-être que vous l’avez précipité sa chute, qui sait.
+
+“Chacun porte en lui une part d’ombre et de lumière.
+Ce sont nos actes et les choix que nous faisons qui révèlent qui nous sommes vraiment.”
+
+Une chose est sûre, votre chemin s’arrête ici.
+
+Merci à vous d’avoir suivi cette histoire jusqu’à l’une de ses fins possibles.
+",
+"/fragment/acte_3/fin_globale.jpg",
+"Le mot “FIN” inscrit sur un coucher du soleil avec des teintes roses et violettes au-dessus de collines embrumées.");

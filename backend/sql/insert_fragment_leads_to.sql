@@ -449,4 +449,76 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "Revenir à la bourse aux minéraux",
     (select id from chapter where history_id = 1 and number = 51),
     (select id from chapter where history_id = 1 and number = 10), 1
+),
+
+-- ==========
+-- ACTE 3 - LES CHOIX POUR LA FIN
+-- ==========
+
+-- Acte 3 — Chapitre 59 — Tout recommence
+-- (valable pour les chapitres : Refuser le vol (9), Pris de remords (53), Les Kobolds (58), Demi-tour (23), Obtempérer Sélémar (64), Se battre brigands (31), En joue milice (60))
+(
+    "Revenir au début de l’aventure",
+    (select id from chapter where history_id = 1 and number = 59),
+    (select id from chapter where history_id = 1 and number = 1), 1
+),
+
+-- Acte 3 — Chapitre 57 — Et maintenant ?
+(
+    "Pris de remords",
+    (select id from chapter where history_id = 1 and number = 57),
+    (select id from chapter where history_id = 1 and number = 53), 1
+),
+(
+    "Le rapporter à l’inconnu",
+    (select id from chapter where history_id = 1 and number = 57),
+    (select id from chapter where history_id = 1 and number = 58), 2
+),
+(
+    "Vers les anciennes mines",
+    (select id from chapter where history_id = 1 and number = 57),
+    (select id from chapter where history_id = 1 and number = 47), 3
+),
+(
+    "Vers Sélémar",
+    (select id from chapter where history_id = 1 and number = 57),
+    (select id from chapter where history_id = 1 and number = 32), 4
+),
+(
+    "Vers Raizin",
+    (select id from chapter where history_id = 1 and number = 57),
+    (select id from chapter where history_id = 1 and number = 24), 5
+),
+(
+    "Vers Lapoutre",
+    (select id from chapter where history_id = 1 and number = 57),
+    (select id from chapter where history_id = 1 and number = 16), 6
+),
+
+-- Acte 3 — Chapitre 53 — Pris de remords
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 53),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 3 — Chapitre 58 — Les Kobolds (= Le rapporter à l’inconnu)
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 58),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 3 — Chapitre 23 — Faire demi-tour
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 23),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 3 — Chapitre 65 — C’est terminé
+(
+    "Revenir au début de l’aventure",
+    (select id from chapter where history_id = 1 and number = 65),
+    (select id from chapter where history_id = 1 and number = 1), 1
 );
