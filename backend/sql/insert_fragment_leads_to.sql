@@ -521,4 +521,73 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "Revenir au début de l’aventure",
     (select id from chapter where history_id = 1 and number = 65),
     (select id from chapter where history_id = 1 and number = 1), 1
+),
+
+-- Acte 3 — Chapitre 47 — Vers les anciennes mines
+(
+    "La mine",
+    (select id from chapter where history_id = 1 and number = 47),
+    (select id from chapter where history_id = 1 and number = 12), 1
+),
+
+-- Acte 3 — Chapitre 12 — La mine
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 12),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Y entrer",
+    (select id from chapter where history_id = 1 and number = 12),
+    (select id from chapter where history_id = 1 and number = 14), 2
+),
+
+-- Acte 3 — Chapitre 14 — L’intérieur de la mine
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 14),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Poursuivre dans la mine",
+    (select id from chapter where history_id = 1 and number = 14),
+    (select id from chapter where history_id = 1 and number = 52), 2
+),
+
+-- Acte 3 — Chapitre 52 — L’autel
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 52),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Suivre votre intuition",
+    (select id from chapter where history_id = 1 and number = 52),
+    (select id from chapter where history_id = 1 and number = 42), 2
+),
+
+-- Acte 3 — Chapitre 42 — La prophétie mine (= Suivre votre intuition)
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 42),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Détruire la mine",
+    (select id from chapter where history_id = 1 and number = 42),
+    (select id from chapter where history_id = 1 and number = 61), 2
+),
+
+-- Acte 3 — Chapitre 61 — Destruction de la mine
+(
+    "Retour vers la surface",
+    (select id from chapter where history_id = 1 and number = 61),
+    (select id from chapter where history_id = 1 and number = 7), 1
+),
+
+-- Acte 3 — Chapitre 7 — Retour vers la surface - Fin mine
+(
+    "C’est terminé",
+    (select id from chapter where history_id = 1 and number = 7),
+    (select id from chapter where history_id = 1 and number = 65), 1
 );

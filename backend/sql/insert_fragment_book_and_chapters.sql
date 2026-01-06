@@ -47,7 +47,7 @@ Un mal inconnu ronge-t-il la ville ? Est-ce une simple épidémie… ou quelque 
 Si oui, cliquez sur le bouton ci-dessous qui vous permettra de naviguer entre les chapitres.
 ",
 NULL,
-"/fragment/acte_1/carte_depart.jpg",
+"/fragment/acte_1/carte_depart_onenta_aux_mines.jpg",
 "Carte du secteur de jeu comme décrit dans le texte attenant."),
 
 -- Acte 1 — Chapitre 2 — La place de la fontaine
@@ -959,4 +959,196 @@ Une chose est sûre, votre chemin s’arrête ici.
 Merci à vous d’avoir suivi cette histoire jusqu’à l’une de ses fins possibles.
 ",
 "/fragment/acte_3/fin_globale.jpg",
-"Le mot “FIN” inscrit sur un coucher du soleil avec des teintes roses et violettes au-dessus de collines embrumées.");
+"Le mot “FIN” inscrit sur un coucher du soleil avec des teintes roses et violettes au-dessus de collines embrumées."),
+
+-- Acte 3 — Chapitre 47 — Vers les anciennes mines
+(1,
+"Vers les anciennes mines",
+false,
+47,
+false,
+NULL,
+
+"Vous décidez de vous diriger vers les anciennes mines d’Argent nichées au cœur des montagnes éponymes.
+Elles ont été exploitées durant plusieurs années, puis abandonnées depuis des lustres.
+
+Le paysage qui vous entoure est magnifique, et la vue sur la vallée se dévoile peu à peu à mesure que vous grimpez.
+Pourtant, vous ressentez comme une forme de résistance.
+Peut-être est-ce l’air frais de la montagne, ou le souvenir de votre échange avec les enfants de l’école qui vous revient en mémoire… ou bien serait-ce autre chose, de plus enfoui ?
+",
+"/fragment/acte_3/mine/carte_mine_abandonnee.jpg",
+"La carte de la région d’Onenta-aux-Mines, avec une loupe qui zoom sur une mine abandonnée dans les Montagnes d’Argent."),
+
+-- Acte 3 — Chapitre 12 — La mine
+(1,
+"La mine",
+false,
+12,
+false,
+NULL,
+
+"Vous arrivez à l’emplacement de la première mine exploitée, celle qui a donné sa renommée à Onenta-aux-Mines avec la découverte du cristal d’argent, il y a cinq siècles.
+
+Vous constatez que l’entrée est constituée d’un passage étroit, encadré par des poutres en bois et un mur de pierre. Le sol est sableux, limé par les nombreux passages des ouvriers et des wagonnets dont les rails sont encore visibles.
+
+Alors que vous vous apprêtez à avancer, une petite voix douce mais moqueuse s’insinue dans vos pensées :
+“Dis, tu ne vas tout de même pas faire comme tous ces mineurs de pacotille et aller t’enterrer là-dedans, alors que tu pourrais aller explorer le monde et ses richesses.”
+
+Que décidez-vous ?
+",
+"/fragment/acte_3/mine/mine_entree.jpg",
+"L’entrée étroite d’une ancienne mine, soutenue par des poutres en bois, encadrée d’un mur de pierres irrégulières.
+Le sol est caillouteux, lissé par les allées et venues des mineurs, et traversé par deux rails qui sortent de l’ouverture."),
+
+-- Acte 3 — Chapitre 14 — L’intérieur de la mine
+(1,
+"L’intérieur de la mine",
+false,
+14,
+false,
+NULL,
+
+"Après avoir pénétré à l’intérieur, vous découvrez plusieurs petites galeries étroites, façonnées sous les coups réguliers des pointerolles dans la roche.
+
+Vous continuez d’avancer.
+Les parois sont tantôt lisses, tantôt rugueuses selon les outils utilisés, que ce soit des pics ou des burins. Certaines se sont partiellement écroulées.
+
+L’air est rare et chargé de poussières, rendant la respiration difficile.
+Vos sens commencent à s’engourdir doucement… ou est-ce votre esprit qui vacille ?
+
+La voix revient, toujours moqueuse :
+“Mais quelle idée d’aller s’y enterrer, non vraiment pas, ce n’est pas bon pour votre teint.
+Un voyage au grand air vous ferait le plus grand bien.”
+
+Au loin, vous entendez résonner le bruit d’une rivière, quelque part dans les profondeurs.
+
+Souhaitez-vous poursuivre votre chemin ?
+",
+"/fragment/acte_3/mine/mine_interieur.jpg",
+"Couloir sombre et exigu avec des parois irrégulières.
+Plusieurs sortes d'entrées possibles pour s'enfoncer dans la mine."),
+
+-- Acte 3 — Chapitre 52 — L’autel
+(1,
+"L’autel",
+false,
+52,
+false,
+NULL,
+
+"La voix poursuit, plus pressante :
+“Tu ne vas tout de même pas t’enfoncer dans ces galeries comme ces pauvres fous de mineurs… si ?”
+
+Guidé par le bruit de l’eau, vous progressez à travers plusieurs méandres jusqu’à parvenir dans une cavité bien plus vaste que les précédentes.
+Elle semble se trouver au cœur de tout ce réseau de galeries.
+
+La rivière serpente tranquillement sur le côté. Un faisceau de lumière, tombant d’un ancien puits écroulé à la surface, illumine au fond, une roche sculptée qui semble être un autel.
+
+En vous approchant prudemment, vous découvrez une forme octogonale avec, en son centre, un étrange emplacement, comme un socle en attente.
+Vous apercevez des symboles gravés sur la paroi qui ressemblent à une inscription partiellement effacée, vous arrivez à déchiffrer les mots “lumière”, “seau”, “corruption” et “destruction”, mais le reste des runes vous échappe.
+
+L’air devient plus lourd et une fatigue inhabituelle vous envahit.
+
+La voix revient, plus douce, presque compatissante :
+“Je t’avais averti qu’il valait mieux pour toi de ne pas t’y aventurer, mais tu peux encore rebrousser chemin. Rien de bon ne t’attend ici.”
+
+Que faites-vous ?
+",
+"/fragment/acte_3/mine/mine_autel.jpg",
+"Caverne bordée par une rivière, une sorte d’autel se tient dans un rayon de lumière naturelle devant une paroi de pierre."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 42 — La prophétie mine (= Suivre votre intuition)
+(1,
+"La prophétie",
+false,
+42,
+false,
+NULL,
+
+"Vous avez l’intuition qu’il faut vous débarrasser de ce fragment, mais ne savez pas pourquoi.
+L’air devient très difficile à respirer… ou est-ce autre chose ?
+
+La voix reprend, angoissée :
+“Je t’avais dit de quitter cet endroit… Qui es-tu, toi qui n’écoutes pas ?
+Il te reste une chance de te sauver, et d’avoir tout ce que tu souhaites.
+Partons d’ici.”
+
+Vous vous rappelez les mots d’Orsik Pioche d’Argent :
+“Personne ne sait exactement ce que cela signifie… Une mise en garde ?”
+Et si c’était vraiment cela ? Un avertissement… contre ce qu’ils ont trouvé ici.
+Avec la raréfaction de l’air et la fatigue, il devient difficile d’avoir les idées claires.
+
+Vous prenez le fragment et, avant de le poser au centre de l’autel, la voix résonne encore une fois :
+“Tu ne devrais pas faire ça.
+Je t’offre tout ce que tu souhaites.
+C’est une mauvaise décision.”
+
+Une fois le fragment posé, une vibration légère parcourt la salle. Un champ lumineux se matérialise autour du cristal, formant une sorte de barrière qui semble absorber son influence néfaste.
+
+Vous ressentez un soulagement immédiat, comme si l’air devenait plus respirable et qu’une partie du poids de la fatigue avait disparu.
+
+Vous remarquez que les runes de l’inscription se sont illuminées d’une lumière vive et surnaturelle.
+Voici ce qui est inscrit :
+“La Lumière purifiera les ténèbres, ce Sceau enfermera la Corruption, la Destruction est la seule voie pour que le monde ne lui appartienne pas.”
+
+Que décidez-vous ?
+",
+"/fragment/acte_3/mine/mine_prophetie_autel.jpg",
+"Un aventurier encapuchonné se tient devant le même autel.
+Une lumière jaune, enveloppée dans un champ de force bleuté, repose sur l’autel.
+Un texte prophétique gravé s’illuminant apparaît sur la paroi de pierre."),
+
+-- Acte 3 — Chapitre 61 — Destruction de la mine
+(1,
+"Destruction de la mine",
+false,
+61,
+false,
+NULL,
+
+"“La Destruction est la seule voie pour que le monde ne lui appartienne pas.”
+Et si c’était vraiment cela, la seule solution pour sauver tout le monde ?
+Vous avez fait votre choix.
+
+En profitant des poches de gaz accumulées dans la mine, vous parvenez à provoquer une étincelle.
+L’explosion est immédiate, amplifiée par la concentration de gaz présente dans la cavité.
+Des blocs de pierres s’effondrent de toutes parts dans un vacarme assourdissant, ensevelissant et détruisant le fragment primaire.
+
+Vous arrivez à vous extirper de justesse en vous faufilant au dernier moment dans les galeries.
+Vous en réchappez… vivant.
+",
+"/fragment/acte_3/mine/mine_explosion.jpg",
+"Un aventurier encapuchonné s’enfuit en courant.
+Une violente explosion a lieu derrière lui, projetant des pierres dans la mine."),
+
+-- Acte 3 — Chapitre 7 — Retour vers la surface - Fin mine
+(1,
+"Retour vers la surface",
+false,
+7,
+false,
+NULL,
+
+"Vous vous en êtes sorti indemne, de justesse.
+Les poumons encore serrés, la respiration courte et les mains couvertes de poussière.
+
+Vous le sentez, quelque chose a changé. Peut-être le monde… peut-être vous.
+Mais vous êtes vivant.
+
+Debout sur les ruines de la mine, autour de vous des décombres subsistent.
+Le fragment est détruit.
+
+Vous gravez sur une stèle, le symbole du cristal se tenant au-dessus d’un octogone, représentant l’autel, marquant l’emplacement de la mine.
+Un témoignage pour que les générations futures n’oublient pas.
+
+Devant vous, la vallée s’étend, paisible, comme s’il ne s’était rien passé.
+Le monde ignore peut-être ce que vous avez accompli… Mais vous, vous le savez.
+
+Bravo Aventurier, vous avez empêché une grande catastrophe.
+Félicitations.
+",
+"/fragment/acte_3/mine/fin_mine.jpg",
+"Un aventurier encapuchonné se tient immobile, dos à une stèle gravée d’un symbole en forme de cristal à l’entrée de la mine écroulée.
+Il contemple la vallée, où la Lapinette poursuit son cours paisible jusqu’à Onenta-aux-Mines.");
