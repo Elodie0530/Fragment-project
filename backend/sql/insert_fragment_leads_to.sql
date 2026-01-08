@@ -590,4 +590,68 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "C’est terminé",
     (select id from chapter where history_id = 1 and number = 7),
     (select id from chapter where history_id = 1 and number = 65), 1
+),
+
+-- Acte 3 — Chapitre 32 — Vers Sélémar
+(
+    "Le virage",
+    (select id from chapter where history_id = 1 and number = 32),
+    (select id from chapter where history_id = 1 and number = 38), 1
+),
+
+-- Acte 3 — Chapitre 38 — Les brigands (= Le virage)
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 38),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Obtempérer",
+    (select id from chapter where history_id = 1 and number = 38),
+    (select id from chapter where history_id = 1 and number = 64), 2
+),
+(
+    "Se battre",
+    (select id from chapter where history_id = 1 and number = 38),
+    (select id from chapter where history_id = 1 and number = 31), 3
+),
+(
+    "Sauter dans la Lapinette",
+    (select id from chapter where history_id = 1 and number = 38),
+    (select id from chapter where history_id = 1 and number = 45), 4
+),
+
+-- Acte 3 — Chapitre 64 — Obtempérer
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 64),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 3 — Chapitre 31 — Se battre brigands
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 31),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 3 — Chapitre 45 — Sauter dans la Lapinette
+(
+    "Les comptoirs commerciaux",
+    (select id from chapter where history_id = 1 and number = 45),
+    (select id from chapter where history_id = 1 and number = 18), 1
+),
+
+-- Acte 3 — Chapitre 18 — Les comptoirs commerciaux
+(
+    "L’équilibre vacille",
+    (select id from chapter where history_id = 1 and number = 18),
+    (select id from chapter where history_id = 1 and number = 40), 1
+),
+
+-- Acte 3 — Chapitre 40 — La décadence de Sélémar (= L’équilibre vacille)
+(
+    "C’est terminé",
+    (select id from chapter where history_id = 1 and number = 40),
+    (select id from chapter where history_id = 1 and number = 65), 1
 );

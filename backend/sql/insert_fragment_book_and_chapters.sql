@@ -1151,4 +1151,222 @@ Félicitations.
 ",
 "/fragment/acte_3/mine/fin_mine.jpg",
 "Un aventurier encapuchonné se tient immobile, dos à une stèle gravée d’un symbole en forme de cristal à l’entrée de la mine écroulée.
-Il contemple la vallée, où la Lapinette poursuit son cours paisible jusqu’à Onenta-aux-Mines.");
+Il contemple la vallée, où la Lapinette poursuit son cours paisible jusqu’à Onenta-aux-Mines."),
+
+-- Acte 3 — Chapitre 32 — Vers Sélémar
+(1,
+"Vers Sélémar",
+false,
+32,
+false,
+NULL,
+
+"Vous décidez de vous diriger vers Sélémar, la grande cité commerciale réputée pour ses nombreux comptoirs animés et ses marchands de tous horizons.
+
+Quelque chose vous y attire, ou serait-ce le fragment, qui cherche à vous guider ?
+
+La route est agréable, longeant le petit chemin de halage, bordé d’un côté par la Lapinette, et de l’autre par la forêt.
+La rivière est paisible en cette saison. Elle serpente au travers de la vallée, bordée par quelques arbres qui l’ombragent par endroits. L’eau clapote contre les berges, et l’air embaume la terre et la sève.
+
+Tout semble calme.
+Et pourtant, une étrange tension flotte dans l’air.
+Difficile à expliquer, comme une impression d’être observé. Ou peut-être est-ce simplement l’excitation de vous rendre dans cette ville débordante d’énergie.
+
+Et pourtant vous avancez.
+",
+"/fragment/acte_3/selemar/carte_selemar.jpg",
+"La carte de la région d’Onenta-aux-Mines, avec une loupe qui zoom sur Sélémar à la confluence des cours d’eau."),
+
+-- Acte 3 — Chapitre 38 — Les brigands (= Le virage)
+(1,
+"Les brigands",
+false,
+38,
+false,
+NULL,
+
+"Vous continuez de suivre le sentier, mais cette étrange impression ne vous quitte pas, à mesure que vous progressez.
+
+Quelque chose dans l’air change.
+
+Des silhouettes se dressent à contre-jour.
+Une voix grave s’élève soudain dans l’air :
+“Vous ne passerez pas !”
+
+Au détour d’un virage, un groupe de six brigands de grand chemin vous barre la route.
+Ils prennent tout l'espace. Chapeaux de cow-boy vissés sur la tête et pistolets aux poings.
+Aucun moyen de passer.
+
+Leur chef s’avance d’un pas, il vous harangue d’une voix forte, sûr de lui, pendant que les autres vous observent en silence.
+
+“Je vous somme de nous remettre tout ce que vous avez en votre possession, bourses, cristaux, armes, objets de quelque valeur, afin que nous complétions notre butin.
+On ne fait pas cela par plaisir, vous savez, mais les temps sont durs.”
+
+Le fragment frémit, est-ce lui ou votre propre instinct qui vous souffle de ne rien lâcher ?
+
+Parfois, les seuls choix qu'on nous laisse sont mauvais.
+Mais on doit quand même choisir.
+
+Que faites-vous ?
+",
+"/fragment/acte_3/selemar/selemar_brigands.jpg",
+"Six brigands armés de pistolets et d’une corde surveillent la route dans un virage sur un chemin de terre.
+Ils portent des chapeaux de cow-boy.
+Un coffre en bois, contenant leur butin (de l’or ainsi que des pierres précieuses) est ouvert devant eux.
+À gauche coule une rivière, à droite commence la lisière d’une forêt.
+Des montagnes se dressent à l’horizon."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 64 — Obtempérer
+(1,
+"Obtempérer",
+false,
+64,
+false,
+NULL,
+
+"Vous avez décidé d’obéir et de faire ce que vous demande le chef des brigands.
+
+Vous vous approchez doucement du groupe.
+Mettez un genou à terre, puis vous obéissez sans protester.
+
+Vous disposez devant vous toutes vos affaires : bourse, armes, cristal.
+Vous les sortez lentement, sans gestes brusques, afin de ne pas alarmer les brigands.
+Ils ne vous lâchent pas du regard, en jouant avec leurs pistolets.
+
+Vous avez la sensation que le fragment vous a été comme arraché. Ce qui est une impression fort désagréable.
+Il brille maintenant devant vous.
+
+Les brigands rassemblent le tout, puis s’éloignent en marmonnant entre eux.
+
+Vous restez seul, dépouillé.
+
+Le fragment est parti, mais une part de vous sait qu’il n’a pas dit son dernier mot.
+",
+"/fragment/acte_3/selemar/selemar_obtemperer.jpg",
+"Six brigands armés vous encadrent et vous surveillent.
+À genoux sur le chemin face à eux, vous avez déposé près d’un coffre ouvert : une épée, trois dagues ainsi qu’une grosse bourse.
+Le fragment que vous possédiez émet une lueur devant vous."),
+
+-- Acte 3 — Chapitre 31 — Se battre brigands
+(1,
+"Se battre",
+false,
+31,
+false,
+NULL,
+
+"Vous avez choisi de vous battre.
+
+Était-ce vraiment un bon choix ?
+
+Les brigands ne bougent pas, mais vous sentent prêts.
+En une fraction de seconde, tous vous braquent, sans trembler, prêts à tirer au moindre geste.
+
+“Nous sommes plus nombreux, avec de l’expérience et mieux armés.
+Pensiez-vous vraiment pouvoir vous mesurer à nous ?”
+
+Vous esquissez un mouvement.
+Un colt verrouillé vous répond.
+
+Que se passe-t-il…
+",
+"/fragment/acte_3/selemar/selemar_se_battre.jpg",
+"Six brigands armés pointent leurs pistolets vers vous dans un virage sur un chemin de terre.
+Un coffre en bois, ouvert devant eux, contient leur butin : de l’or ainsi que des cristaux multicolores.
+La rivière borde le côté gauche, la forêt commence à droite, et des montagnes s’élèvent en l’arrière-plan."),
+
+-- Acte 3 — Chapitre 45 — Sauter dans la Lapinette
+(1,
+"Sauter dans la Lapinette",
+false,
+45,
+false,
+NULL,
+
+"Vous hésitez un instant, mieux vaut éviter les ennuis.
+Ce n’est pas le moment de déclencher une bagarre.
+
+L’atmosphère est pesante, mais sans violence. Il vous faut une échappatoire.
+
+Une petite voix, ou peut-être le fragment lui-même, vous souffle qu’après tout ce que vous avez déjà traversé, fuir n’est pas de la lâcheté, mais de la sagesse.
+C’est peut-être, au contraire, la meilleure des options.
+
+Alors vous le faites.
+Tout le monde doit mourir un jour. Mais pas aujourd’hui.
+
+Vous décidez de plonger dans la rivière.
+Doucement, vous vous rapprochez du bord, puis vous sautez.
+
+Avec beaucoup de chance, vous évitez les rochers.
+L’eau fraîche vous saisit, vous emportant avec elle.
+
+Les brigands vous regardent, silencieusement, tandis que vous êtes emporté par le courant, quelques-uns vous suivent en courant le long de la rive durant un moment.
+
+Vous vous laissez porter par le courant, ballotté par les flots jusqu’à Sélémar.
+",
+"/fragment/acte_3/selemar/selemar_saut_riviere.jpg",
+"Paysage composé, d’un côté de montagnes, de l’autre d’un chemin avec quelques arbres et trois brigands courant dans le sens de la rivière se trouvant entre les deux."),
+
+-- Acte 3 — Chapitre 18 — Les comptoirs commerciaux
+(1,
+"Les comptoirs commerciaux",
+false,
+18,
+false,
+NULL,
+
+"Avec le courant moins fort dans la plaine, vous parvenez à vous hisser hors de l’eau à hauteur de Sélémar.
+Objectif atteint, vous avez réussi à échapper aux brigands.
+
+Vous vous rendez aux comptoirs commerciaux de la ville, comme initialement prévu, sauf qu’ils se trouvent sur l’autre rive.
+Au moins vous aurez le temps de vous sécher, cette ville est si vaste.
+
+Ici, c’est une véritable plaque tournante du commerce régional, on y trouve de tout et tout se négocie.
+Certaines échoppes sont directement installées sur les docks, quand d’autres se trouvent dans de grands hangars.
+Grâce à la Hase, le grand fleuve qui coule à proximité, les marchandises peuvent circuler librement dans tout l’Empire.
+
+Vous êtes à la recherche d’un commerçant bien particulier.
+Il est le plus réputé dans son domaine et, d’après les bruits qui courent, attention non pas que vous prêtiez foi aux rumeurs, il paraît qu’il paye généreusement.
+",
+"/fragment/acte_3/selemar/selemar_comptoirs.jpg",
+"Au soleil déclinant derrière les montagnes, un fleuve où naviguent des bateaux de toutes tailles, dont certains sont amarrés, sépare les deux rives d’une ville.
+D’un côté une ville dense, de l’autre des comptoirs commerciaux avec auvents et étals de marchands."),
+
+-- Acte 3 — Chapitre 40 — La décadence de Sélémar (= L’équilibre vacille)
+(1,
+"La décadence de Sélémar",
+false,
+40,
+false,
+NULL,
+
+"Après quelque temps de recherche parmi tous les marchands, vous trouvez enfin celui auquel vous vous attendiez.
+Il a un petit étal qui ne paye pas de mine, composé de quelques tables en bois non abritées, elles sont recouvertes de cristaux en tous genres.
+Mais il ne faut pas s’arrêter aux apparences, c’est le meilleur dans son domaine d’expertise.
+
+Vous lui présentez le fragment que vous avez subtilisé.
+Et attendez son verdict.
+
+Il prend son temps pour l’examiner sous toutes les coutures.
+Il vous propose un prix, vous enchérissez un peu comme de coutume.
+Et à votre grande surprise, il vous tend une grosse bourse sans même négocier, chose rare, que vous acceptez sans discuter.
+Puis, il en brise un morceau, et à votre stupéfaction, à l’endroit de la cassure, le fragment se régénère.
+
+On ne joue pas impunément avec des forces qui nous dépassent.
+Elles ne se laissent pas contenir.
+Vous n’étiez qu’une pièce de plus sur l’échiquier.
+
+Le marchand en a fait commerce, d’autres l'ont suivi, et le fragment s’est répandu.
+L’Empire est tombé le premier. Puis les royaumes, un à un, sur tous les continents.
+Le cristal parle toutes les langues, murmure à chacun des rêves de grandeur et de richesse.
+
+Peut-être est-ce un mal pour un bien. Vous n’êtes plus sous emprise directe.
+Mais vous avez aidé à ouvrir la porte.
+
+Merci pour votre aide précieuse, Aventurier. Profitez bien de votre argent.
+Le cristal vous remercie également.
+",
+"/fragment/acte_3/selemar/fin_selemar.jpg",
+"Un aventurier encapuchonné échange un objet lumineux, invisible entre ses mains, contre une grosse bourse tendue par un marchand de cristaux richement vêtu, sur un marché au crépuscule.");
