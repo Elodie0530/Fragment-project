@@ -1369,4 +1369,182 @@ Merci pour votre aide précieuse, Aventurier. Profitez bien de votre argent.
 Le cristal vous remercie également.
 ",
 "/fragment/acte_3/selemar/fin_selemar.jpg",
-"Un aventurier encapuchonné échange un objet lumineux, invisible entre ses mains, contre une grosse bourse tendue par un marchand de cristaux richement vêtu, sur un marché au crépuscule.");
+"Un aventurier encapuchonné échange un objet lumineux, invisible entre ses mains, contre une grosse bourse tendue par un marchand de cristaux richement vêtu, sur un marché au crépuscule."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 24 — Vers Raizin
+(1,
+"Vers Raizin",
+false,
+24,
+false,
+NULL,
+
+"Vous décidez de vous diriger vers Raizin, et la route de ses vignobles.
+
+Quelque chose vous y attire, ou serait-ce le fragment qui cherche à vous guider ?
+
+Le paysage est calme, mais une tension plane dans l’air.
+Sur le chemin, peu de voyageurs. Seuls les oiseaux et le vent dans la plaine accompagnent vos pas, avant d’atteindre les côteaux des vignobles.
+
+C’est une zone régulièrement en conflit : entre autres patrouilles fréquentes et escarmouches signalées…
+Les tensions avec le duché voisin d’Asterakie sont bien connues.
+
+Et pourtant vous avancez.
+",
+"/fragment/acte_3/raizin/carte_raizin.jpg",
+"La carte de la région d’Onenta-aux-Mines, avec une loupe qui zoom sur Raizin, village entouré de vignobles."),
+
+-- Acte 3 — Chapitre 48 — La milice d’Asterakie
+(1,
+"La milice d’Asterakie",
+false,
+48,
+false,
+NULL,
+
+"“Halte-là !”
+
+Vous entendez la voix avant même de voir la milice.
+Six silhouettes se détachent lentement de l’horizon, comme sorties d’un rêve trop long.
+
+“Vous êtes sur le territoire du duché d’Asterakie.
+Il vous faut un laissez-passer si vous souhaitez continuer d’avancer.
+Nous sommes chargés de les contrôler, les anciens ne sont plus valides, trop de contrefaçons circulent.
+Seul l’intendant du Duc est autorisé à délivrer les nouveaux, désormais dotés de gages de sécurité renforcés.”
+
+Le ton est monocorde, presque fatigué.
+Il ne semble pas y avoir d’hostilité malgré les fusils qu’ils portent.
+Juste un protocole.
+
+“Vos papiers ne sont pas en règle.
+Vous pouvez quitter le duché ou nous suivre, mais il n’y a pas de troisième voie.”
+
+Parfois, les seuls choix qu'on nous laisse sont mauvais.
+Mais on doit quand même choisir.
+
+Que faites-vous ?
+",
+"/fragment/acte_3/raizin/milice_face.jpg",
+"Bataillon de miliciens constitués de six personnes dont un porte-drapeau, armés de fusils.
+Ils portent des uniformes avec une veste violette cinturée, un pantalon jaune, une bandouillère et des épaulettes vertes ainsi qu’un casque ayant un plumet jaune.
+Le drapeau arbore des couleurs vertes et jaunes."),
+
+-- Acte 3 — Chapitre 60 — En joue milice (= Se battre)
+(1,
+"En joue",
+false,
+60,
+false,
+NULL,
+
+"Vous avez choisi de vous battre.
+
+Était-ce vraiment un bon choix ?
+
+Les miliciens ne bougent pas, mais vous sentent prêts.
+En une fraction de seconde, tous vous mettent en joue, sans trembler, prêts à tirer au moindre geste.
+
+“Nous vous avions prévenu, il n’y a pas de troisième voie.
+Nous sommes plus nombreux, très entraînés et mieux armés.
+Pensiez-vous vraiment pouvoir vous attaquer à un bataillon au complet ?”
+
+Vous esquissez un mouvement.
+Un cliquetis de verrous vous répond.
+Le protocole est en marche.
+
+Que se passe-t-il…
+",
+"/fragment/acte_3/raizin/milice_en_joue.jpg",
+"Bataillon de six miliciens armés vous mettant en joue avec leurs fusils."),
+
+-- Acte 3 — Chapitre 26 — Les suivre
+(1,
+"Les suivre",
+false,
+26,
+false,
+NULL,
+
+"Vous hésitez un instant, puis baissez les yeux.
+Mieux vaut éviter les ennuis. Ce n’est pas le moment de déclencher une fusillade.
+
+Une petite voix, ou peut-être le fragment lui-même, vous souffle qu’après tout ce que vous avez déjà traversé, c’est peut-être la meilleure des options.
+Alors vous les suivez.
+
+Le milicien qui vous a demandé vos papiers vous fait signe d’avancer.
+Vous obéissez sans protester.
+Le groupe vous encadre, silencieux.
+
+L’atmosphère est pesante, mais sans violence.
+Juste une rigueur froide, mécanique, protocolaire.
+On vous emmène sans brutalité. Mais sans détour.
+
+Ce jour-là, le Duc est en ville pour un congrès diplomatique.
+La sécurité est renforcée.
+
+La milice vous dépose au poste de garde.
+
+On ne vous dit rien.
+",
+"/fragment/acte_3/raizin/milice_suivre.jpg",
+"Bataillon de six miliciens armés de dos avançant devant vous."),
+
+-- Acte 3 — Chapitre 39 — Le poste de garde
+(1,
+"Le poste de garde",
+false,
+39,
+false,
+NULL,
+
+"Au poste de garde, toutes vos affaires sont confisquées.
+Elles sont triées, inventoriées, scellées.
+Le fragment figure parmi elles.
+
+Vous protestez, mais personne ne vous écoute.
+Vous n’aviez pas vos papiers à jour, et sur le mauvais territoire.
+
+Tout semble déjà décidé.
+
+Vous êtes conduit dans un couloir froid, sans fenêtre, puis jeté dans une cellule étroite.
+Sans explications.
+
+Le fragment vous a été arraché, mais une part de vous sait qu’il n’a pas dit son dernier mot.
+Tout le monde doit mourir un jour. Mais pas aujourd’hui.
+",
+"/fragment/acte_3/raizin/raizin_prison.jpg",
+"Une cellule étroite, avec un sol pavé irrégulier, des murs ayant des pierres très lisses.
+Ainsi qu’une petite fenêtre à barreaux assez haute offrant un rayon de lumière.
+Vous êtes assis sur les genoux au fond de la cellule, sous la fenêtre."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 50 — La décadence de Raizin (= L’équilibre vacille)
+(1,
+"La décadence de Raizin",
+false,
+50,
+false,
+NULL,
+
+"Le fragment a été offert par le Duc en cadeau diplomatique à l’Empereur.
+Un présent rare, d’une beauté troublante.
+
+Vous n’étiez qu’une pièce de plus sur l’échiquier.
+On ne joue pas impunément avec des forces qui nous dépassent.
+Elles ne se laissent pas contenir.
+
+L’Empire est tombé le premier. Puis les royaumes, un à un, sur tous les continents.
+Le cristal parle toutes les langues, murmure à chacun des rêves de grandeur et de richesse.
+
+Peut-être est-ce un mal pour un bien. Vous n’êtes plus sous emprise directe.
+Mais vous avez aidé à ouvrir la porte.
+
+Merci pour votre aide précieuse, Aventurier.
+Le cristal vous remercie également.
+",
+"/fragment/acte_3/raizin/fin_raizin.jpg",
+"Une salle du trône sombre et majestueuse.
+Un coffre ouvert, posé face au trône, diffuse une lumière surnaturelle qui éclaire le bas du siège et la silhouette encapuchonnée de la personne assise dessus, immobile, les bras posés sur ses genoux.");

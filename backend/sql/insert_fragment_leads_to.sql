@@ -654,4 +654,56 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     "C’est terminé",
     (select id from chapter where history_id = 1 and number = 40),
     (select id from chapter where history_id = 1 and number = 65), 1
+),
+
+-- Acte 3 — Chapitre 24 — Vers Raizin
+(
+    "La milice d’Asterakie",
+    (select id from chapter where history_id = 1 and number = 24),
+    (select id from chapter where history_id = 1 and number = 48), 1
+),
+
+-- Acte 3 — Chapitre 48 — La milice d’Asterakie
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 48),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Se battre",
+    (select id from chapter where history_id = 1 and number = 48),
+    (select id from chapter where history_id = 1 and number = 60), 3
+),
+(
+    "Les suivre sans histoire",
+    (select id from chapter where history_id = 1 and number = 48),
+    (select id from chapter where history_id = 1 and number = 26), 2
+),
+
+-- Acte 3 — Chapitre 60 — En joue milice (= Se battre)
+(
+    "Tout recommence",
+    (select id from chapter where history_id = 1 and number = 60),
+    (select id from chapter where history_id = 1 and number = 59), 1
+),
+
+-- Acte 3 — Chapitre 26 — Les suivre
+(
+    "Le poste de garde",
+    (select id from chapter where history_id = 1 and number = 26),
+    (select id from chapter where history_id = 1 and number = 39), 1
+),
+
+-- Acte 3 — Chapitre 39 — Le poste de garde
+(
+    "L’équilibre vacille",
+    (select id from chapter where history_id = 1 and number = 39),
+    (select id from chapter where history_id = 1 and number = 50), 1
+),
+
+-- Acte 3 — Chapitre 50 — La décadence de Raizin (= L’équilibre vacille)
+(
+    "C’est terminé",
+    (select id from chapter where history_id = 1 and number = 50),
+    (select id from chapter where history_id = 1 and number = 65), 1
 );
