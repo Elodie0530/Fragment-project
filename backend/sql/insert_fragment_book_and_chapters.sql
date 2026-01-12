@@ -843,7 +843,7 @@ Et soudain, tout recommence.
 "Vous êtes seul sur une plaine de blé, en face des montagnes.
 Le ciel est nuageux, ils forment des cercles au-dessus de vous dans un dégradé de couleurs allant du bleu au rose en passant par du jaune."),
 
--- Acte 3 — Chapitre 57 — Et maintenant ?
+-- Acte 3 — Chapitre 57 — Et maintenant ? (= Remonter le temps)
 (1,
 "Et maintenant ?",
 false,
@@ -1547,4 +1547,289 @@ Le cristal vous remercie également.
 ",
 "/fragment/acte_3/raizin/fin_raizin.jpg",
 "Une salle du trône sombre et majestueuse.
-Un coffre ouvert, posé face au trône, diffuse une lumière surnaturelle qui éclaire le bas du siège et la silhouette encapuchonnée de la personne assise dessus, immobile, les bras posés sur ses genoux.");
+Un coffre ouvert, posé face au trône, diffuse une lumière surnaturelle qui éclaire le bas du siège et la silhouette encapuchonnée de la personne assise dessus, immobile, les bras posés sur ses genoux."),
+
+-- Acte 3 — Chapitre 16 — Vers Lapoutre
+(1,
+"Vers Lapoutre",
+false,
+16,
+false,
+NULL,
+
+"Vous décidez de vous diriger vers Lapoutre, un petit village niché au nord, entouré de forêts profondes, riches en essences végétales singulières.
+
+Quelque chose vous y attire, ou serait-ce le fragment qui cherche à vous guider ?
+
+On raconte que ces bois abritent des essences rares, mais aussi des créatures que l’on ne dérange pas sans conséquences.
+Le chemin forestier est calme. Trop calme. Un peu beaucoup trop calme à votre goût.
+Les oiseaux y chantent à peine, comme s’ils retenaient leur souffle.
+
+Peu de voyageurs croisent votre route.
+Seuls les quelques bruissements de feuilles et le vent accompagnent vos pas, jusqu’à la lisière de la forêt.
+
+Dans cette ambiance, une tension diffuse s’installe.
+Quelque chose vous observe, ou vous attend.
+Quelque part, tapi dans l’ombre du sous-bois.
+
+Et pourtant vous avancez.
+",
+"/fragment/acte_3/lapoutre/carte_lapoutre.jpg",
+"La carte de la région d’Onenta-aux-Mines, avec une loupe qui zoom sur Lapoutre, village entouré de forêts."),
+
+-- Acte 3 — Chapitre 29 — La clairière
+(1,
+"La clairière",
+false,
+29,
+false,
+NULL,
+
+"Au fur et à mesure de votre progression, vous vous enfoncez plus profondément au cœur de la forêt.
+
+À l’orée d’une clairière, vous apercevez un magnifique dragon écarlate se tenant couché sur un rocher, luisant dans les rayons du soleil.
+
+Soudain, plus un bruit. Même les oiseaux se taisent.
+
+Le dragon a redressé sa tête comme s’il vous attendait, et s’adresse à vous d’une voix profonde et ancienne, sans ouvrir la bouche :
+“Qui que vous soyez, avez-vous la moindre idée de ce que vous avez osé faire ?
+Il y a beaucoup de choses, et d’équilibres, que vous ne comprenez pas ici-bas.”
+
+Vous ne bougez pas, lui non plus.
+Prenant un temps pour vous jauger, si c’est bien de vous qu’il s’agit.
+
+Vous envisagez les différentes options possibles : contourner la clairière avec la densité de la forêt vous prendrait beaucoup trop de temps. Faire demi-tour pour revenir à Onenta-aux-Mines, c’est risqué mais faisable. Discuter avec lui, ou même passer en force... pourquoi pas.
+
+Que faites-vous ?
+",
+"/fragment/acte_3/lapoutre/dragon_arrive.jpg",
+"Un dragon de couleur rouge orangé, couché sur un rocher à l’entrée de la clairière bordée par des arbres.
+La lumière du soleil joue sur les reflets de ses écailles."),
+
+-- Acte 3 — Chapitre 46 — Parlementer
+(1,
+"Parlementer",
+false,
+46,
+false,
+NULL,
+
+"Vous avez choisi la voie de la diplomatie avec ce dragon légendaire.
+
+Celui-ci reprend d’une voix caverneuse :
+“Je vais vous expliquer, pour que vous puissiez faire vos choix en connaissance de cause.”
+
+Il vous fixe longuement.
+“Il y a fort, fort longtemps, mes ancêtres et les premiers peuples ont uni leurs forces pour ensevelir ce cristal, afin de préserver l’équilibre des forces”, révèle-t-il.
+
+Puis il poursuit :
+“Ce cristal détient une magie originelle très ancienne que personne aujourd’hui ne peut maîtriser.
+La terre, ici, est sacrée et limite son pouvoir.
+Ce cristal doit être replacé dans son lieu d’origine et détruit par le feu, ou il finira par corrompre tout ce qu’il touche.
+Tout ceci s’est déjà produit et se reproduira encore tant qu’il ne sera pas stoppé.”
+
+“Je suis fort, mais malgré toute ma puissance sur les différents plans, je ne peux contenir l'influence de cet artefact en dehors de cette zone, et même ici, cela me demande beaucoup de ressources.”
+
+Il réfléchit en marquant une pause.
+“Je vous offre l’opportunité de pouvoir remonter le temps, et de vous ramener à un point clé où vos choix n’étaient pas encore définis, afin d’en faire d’autres, selon votre conscience.”
+
+La petite voix revient au creux de votre esprit :
+“Ne l’écoute pas. Ce sont des foutaises.
+Nous sommes bien ensemble… nous allons faire de grandes choses.”
+
+Que décidez-vous ?
+",
+"/fragment/acte_3/lapoutre/dragon_parlementer.jpg",
+"Le dragon se redresse sur le rocher en déployant ses ailes à mi-hauteur.
+Le soleil couchant derrière lui."),
+
+-- Acte 3 — Chapitre 21 — Le franchissement de la clairière ( = Tenter de passer & Passer malgré tout)
+(1,
+"Le franchissement de la clairière",
+false,
+21,
+false,
+NULL,
+
+"Le dragon se redresse, vous barrant le passage en déployant ses ailes massives, formant ainsi une barrière presque infranchissable.
+
+Il observe calmement votre réaction, jaugeant votre détermination.
+
+Puis, il reprend d’une voix grave :
+“Il ne doit pas quitter le territoire. Ce serait d’un grand péril pour tous.
+Je me dois de me battre, s’il le faut.”
+
+Le fragment frémit, est-ce lui ou votre propre instinct qui vous souffle de ne rien lâcher ?
+
+Le dragon, sans trop savoir pourquoi, vous semble hésiter.
+Une ombre traverse fugacement son regard.
+Il vacille à peine, comme s’il luttait contre une force invisible.
+
+Vous en profitez pour vous glisser sous son aile et rejoindre l’autre côté de la clairière, sans qu’il ait le temps de réagir.
+
+Il chancelle derrière vous.
+",
+"/fragment/acte_3/lapoutre/dragon_franchissement.jpg",
+"Le dragon se redresse sur le rocher menaçant, ouvrant ses ailes au-dessus de lui.
+Les rayons du soleil éclairant par derrière le faisant devenir plus sombre."),
+
+-- Rappel ordre — INSERT INTO chapter (history_id, title, is_first, number, gives_fragment, text_normal, text_insane, image_path, image_alt) VALUES
+
+-- Acte 3 — Chapitre 35 — Le village des bûcherons
+(1,
+"Le village des bûcherons",
+false,
+35,
+false,
+NULL,
+
+"Après avoir traversé la clairière et poursuivi votre parcours à travers la forêt, vous parvenez enfin au village de Lapoutre, exténué.
+
+Les habitants, ayant senti trembler la forêt, accourent visiblement alarmés et suspicieux.
+
+L’un d’entre eux vous questionne :
+“Que s’est-il passé, avez-vous vu apparaître le Gardien ?
+Toute la zone s’est mise à trembler, on aurait dit un combat de titans !”
+
+Vous répondez, interloqué :
+”Quel Gardien ?”
+
+Une petite voix chuchote alors, au creux de votre esprit :
+“Laisse-les.
+Ne t’en occupe pas, tu vois bien que ce sont des rustres.
+Ils ont sûrement des légendes locales.”
+
+Parfois, les seuls choix qu'on nous laisse sont mauvais.
+Mais on doit quand même choisir.
+
+Que répondrez-vous aux villageois, savez-vous vraiment ce qu’il s’est passé ?
+",
+"/fragment/acte_3/lapoutre/lapoutre_bucherons.jpg",
+"Village au cœur de la forêt avec des maisons en pierre et en bois.
+Les villageois nombreux viennent vers vous."),
+
+-- Acte 3 — Chapitre 28 — Dire ce qu’il s’est passé (= Oui bûcherons)
+(1,
+"Dire ce qu’il s’est passé",
+false,
+28,
+false,
+NULL,
+
+"“Ce qu’il s’est passé, c’est qu’en traversant une clairière en contrebas, j’ai croisé un dragon écarlate.
+Il m’a refusé le passage.”
+
+Un frémissement d’inquiétude traverse les villageois.
+
+“Vous vous êtes battu contre lui ?” demande une voix plus ferme.
+
+Vous hésitez, le souvenir encore vif de ce qui s’est passé dans votre mémoire.
+“J’ai pas eu le choix. C’était lui ou nous.”
+
+Un silence lourd s’installe.
+
+Puis, sans un mot de plus, les villageois vous invitent à entrer dans le village.
+Quelque chose dans leurs regards vous met mal à l’aise.
+
+La petite voix revient et murmure, moqueuse :
+“Ils savent. Ils ont peur.”
+",
+"/fragment/acte_3/lapoutre/lapoutre_oui_bucherons.jpg",
+"Au cœur du village, les habitants se sont rassemblés sur la rue pavée devant leurs maisons."),
+
+-- Acte 3 — Chapitre 43 — Ne sais pas (= Non bûcherons)
+(1,
+"Ne sais pas",
+false,
+43,
+false,
+NULL,
+
+"“Un Gardien ?” répétez-vous surpris.
+“Nous avons rencontré beaucoup de créatures en venant, mais un Gardien, de quoi parlez-vous ?”
+
+Les villageois se regardent avec inquiétude.
+“Peut-être que ce n’était rien finalement, juste la forêt qui grondait violemment.”
+
+Un villageois plus vieux que les autres, vous fixe longuement d’un regard perçant :
+“On dit que ceux qui les portent ne voient plus le monde tel qu’il est.”
+
+Un silence pesant s’installe.
+
+Puis, sans un mot de plus, les villageois vous invitent à entrer dans le village.
+Quelque chose dans leurs regards vous met mal à l’aise.
+
+La petite voix revient et murmure, moqueuse :
+“Comme dans leurs contes. Ils savent. Ils ont peur.”
+",
+"/fragment/acte_3/lapoutre/lapoutre_non_bucherons.jpg",
+"Au cœur du village, les habitants se sont rassemblés sur la rue pavée devant leurs maisons."),
+
+-- Acte 3 — Chapitre 37 — Le verre d’accueil
+(1,
+"Le verre d’accueil",
+false,
+37,
+false,
+NULL,
+
+"“Étranger, vous devez être fatigué par votre long voyage et toutes les épreuves rencontrées jusqu’ici.
+
+Veuillez accepter notre hospitalité.
+
+Vous pouvez dormir ici, c’est la maison pour les voyageurs de passage.
+Elle est un peu rudimentaire, mais vous y serez tranquille pour vous reposer.
+
+Laissez-nous faire.
+
+Tout d’abord, voici un verre pour vous désaltérer.
+C’est que du naturel, fait avec les plantes offertes par la forêt.
+Nous vous préparons également un repas chaud.”
+
+Sur ce, comme vous tombez de fatigue, vous ne vous attardez pas auprès des villageois et allez vous coucher après les avoir remerciés.
+
+Vous sombrez dans un sommeil profond, et semblez voir des ombres danser.
+
+Vous avez la sensation que le fragment vous a été comme arraché. Ce qui est une impression fort désagréable.
+
+Puis, plus rien.
+Un trou noir.
+
+Du moins, jusqu’au réveil.
+",
+"/fragment/acte_3/lapoutre/lapoutre_bucherons_verre.jpg",
+"A la tombée de la nuit, le village est éclairé par des lanternes, quelques habitants sont encore dehors.
+La forêt est lugubre."),
+
+-- Acte 3 — Chapitre 20 — La décadence de Lapoutre (= L’équilibre vacille)
+(1,
+"La décadence de Lapoutre",
+false,
+20,
+false,
+NULL,
+
+"Au matin, après avoir accepté l’hospitalité des villageois, vous découvrez qu’on vous a délesté de vos affaires.
+
+Vous restez seul, dépouillé.
+Tout le monde doit mourir un jour. Mais pas aujourd’hui.
+
+Le fragment est parti, mais une part de vous sait qu’il n’a pas dit son dernier mot.
+
+Vous n’étiez qu’une pièce de plus sur l’échiquier.
+On ne joue pas impunément avec des forces qui nous dépassent.
+Elles ne se laissent pas contenir.
+
+Les affaires subtilisées seront revendues par la communauté, et le fragment voyageant au gré des transactions, contaminera ses différents possesseurs et étendra sa domination…
+L’Empire est tombé le premier. Puis les royaumes, un à un, sur tous les continents.
+Le cristal parle toutes les langues, murmure à chacun des rêves de grandeur et de richesse.
+
+Peut-être est-ce un mal pour un bien. Vous n’êtes plus sous emprise directe.
+Mais vous avez aidé à ouvrir la porte.
+
+Merci pour votre aide précieuse, Aventurier.
+Le cristal vous remercie également.
+",
+"/fragment/acte_3/lapoutre/fin_lapoutre.jpg",
+"Au petit matin brumeux, des villageois encapuchonnés partent dans la forêt avec des lanternes.
+L’un d’entre eux porte une sacoche avec quelque chose à l’intérieur d’où émane une étrange lueur.");

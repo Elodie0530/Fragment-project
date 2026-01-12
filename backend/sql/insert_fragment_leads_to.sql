@@ -463,7 +463,7 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
     (select id from chapter where history_id = 1 and number = 1), 1
 ),
 
--- Acte 3 — Chapitre 57 — Et maintenant ?
+-- Acte 3 — Chapitre 57 — Et maintenant ? (= Remonter le temps)
 (
     "Pris de remords",
     (select id from chapter where history_id = 1 and number = 57),
@@ -705,5 +705,88 @@ INSERT INTO lead_to (action, start_id, end_id, position) VALUES
 (
     "C’est terminé",
     (select id from chapter where history_id = 1 and number = 50),
+    (select id from chapter where history_id = 1 and number = 65), 1
+),
+
+-- Acte 3 — Chapitre 16 — Vers Lapoutre
+(
+    "La clairière",
+    (select id from chapter where history_id = 1 and number = 16),
+    (select id from chapter where history_id = 1 and number = 29), 1
+),
+
+-- Acte 3 — Chapitre 29 — La clairière
+(
+    "Faire demi-tour",
+    (select id from chapter where history_id = 1 and number = 29),
+    (select id from chapter where history_id = 1 and number = 23), 1
+),
+(
+    "Parlementer",
+    (select id from chapter where history_id = 1 and number = 29),
+    (select id from chapter where history_id = 1 and number = 46), 2
+),
+(
+    "Tenter de passer",
+    (select id from chapter where history_id = 1 and number = 29),
+    (select id from chapter where history_id = 1 and number = 21), 3
+),
+
+-- Acte 3 — Chapitre 46 — Parlementer
+(
+    "Remonter le temps",
+    (select id from chapter where history_id = 1 and number = 46),
+    (select id from chapter where history_id = 1 and number = 57), 1
+),
+(
+    "Passer malgré tout",
+    (select id from chapter where history_id = 1 and number = 46),
+    (select id from chapter where history_id = 1 and number = 21), 2
+),
+
+-- Acte 3 — Chapitre 21 — Le franchissement de la clairière ( = Tenter de passer & Passer malgré tout)
+(
+    "Les bûcherons",
+    (select id from chapter where history_id = 1 and number = 21),
+    (select id from chapter where history_id = 1 and number = 35), 1
+),
+
+-- Acte 3 — Chapitre 35 — Le village des bûcherons
+(
+    "Oui",
+    (select id from chapter where history_id = 1 and number = 35),
+    (select id from chapter where history_id = 1 and number = 28), 1
+),
+(
+    "Non",
+    (select id from chapter where history_id = 1 and number = 35),
+    (select id from chapter where history_id = 1 and number = 43), 2
+),
+
+-- Acte 3 — Chapitre 28 — Dire ce qu’il s’est passé (= Oui bûcherons)
+(
+    "Le verre d’accueil",
+    (select id from chapter where history_id = 1 and number = 28),
+    (select id from chapter where history_id = 1 and number = 37), 1
+),
+
+-- Acte 3 — Chapitre 43 — Ne sais pas (= Non bûcherons)
+(
+    "Le verre d’accueil",
+    (select id from chapter where history_id = 1 and number = 43),
+    (select id from chapter where history_id = 1 and number = 37), 1
+),
+
+-- Acte 3 — Chapitre 37 — Le verre d’accueil
+(
+    "L’équilibre vacille",
+    (select id from chapter where history_id = 1 and number = 37),
+    (select id from chapter where history_id = 1 and number = 20), 1
+),
+
+-- Acte 3 — Chapitre 20 — La décadence de Lapoutre (= L’équilibre vacille)
+(
+    "C’est terminé",
+    (select id from chapter where history_id = 1 and number = 20),
     (select id from chapter where history_id = 1 and number = 65), 1
 );
