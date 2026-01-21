@@ -1,31 +1,32 @@
 .book {
+  background-color: rgb(250, 250, 231);
+
   h3 {
     font-size: medium;
     background-color: bisque;
   }
-  .text_test {
-    background-color: rgb(200, 158, 240);
-  }
-  .return_backend {
-    background-color: greenyellow;
-  }
 }
+
 .chapter_choice {
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.75rem;
+  padding: 1rem 0rem;
 }
+
 .button_chapter_choice {
   background-color: bisque;
   cursor: pointer;
   width: 60%;
   max-width: 80%;
-  padding: 0.25rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.438);
+  box-shadow: 0 2px 4px rgba(126, 7, 238, 0.3);
 }
+
 .images {
   max-width: 90%;
   height: auto;
@@ -36,7 +37,6 @@
 }
 
 .display_text_current {
-  background-color: rgb(250, 250, 231);
   white-space: pre-wrap;
   text-align: left;
   padding: 0rem 3rem;

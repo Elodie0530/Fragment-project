@@ -12,13 +12,13 @@ function BookPage() {
     fetch(
       `${
         import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8000"
-      }/api/histories/${id}/chapters`
+      }/api/histories/${id}/chapters`,
     )
       .then((response) => response.json())
       .then((data) => {
         setChapters(data);
         setCurrentChapter(
-          data.find((dataElement) => Boolean(dataElement.is_first) === true)
+          data.find((dataElement) => Boolean(dataElement.is_first) === true),
         );
       })
       .catch((err) => {
@@ -43,52 +43,53 @@ function BookPage() {
           Cette page sera consacrée à la partie livre dont vous êtes le héros
           qui est le coeur du projet.
         </div>
+
+        {currentChapter != null && (
+          <section>
+            <h2>{currentChapter.title}</h2>
+
+            <img
+              className="images"
+              src={`${import.meta.env.VITE_BACKEND_URL}${
+                currentChapter.image_path
+              }`}
+              alt={currentChapter.image_alt}
+            />
+
+            <p className="display_text_current">{displayTextCurrentChapter}</p>
+
+            <div className="chapter_choice">
+              {currentChapter.actions
+                .sort((a, b) => a.position - b.position)
+                .map(({ id, end_id, action }) => (
+                  /*this key unique it's necessairy but is a array map*/
+                  <button
+                    className="button_chapter_choice"
+                    type="button"
+                    key={id}
+                    onClick={() => {
+                      const newStartCurrentChapter = chapters.find(
+                        (oneChapter) => oneChapter.id === end_id,
+                      );
+
+                      setCurrentChapter(newStartCurrentChapter);
+
+                      if (Boolean(newStartCurrentChapter?.is_first) === true) {
+                        setHaveFragment(false);
+                      } else if (
+                        Boolean(newStartCurrentChapter?.gives_fragment) === true
+                      ) {
+                        setHaveFragment(true);
+                      }
+                    }}
+                  >
+                    {action}
+                  </button>
+                ))}
+            </div>
+          </section>
+        )}
       </div>
-      {currentChapter != null && (
-        <section>
-          <h2>{currentChapter.title}</h2>
-
-          <img
-            className="images"
-            src={`${import.meta.env.VITE_BACKEND_URL}${
-              currentChapter.image_path
-            }`}
-            alt={currentChapter.image_alt}
-          />
-
-          <p className="display_text_current">{displayTextCurrentChapter}</p>
-
-          <div className="chapter_choice">
-            {currentChapter.actions
-              .sort((a, b) => a.position - b.position)
-              .map(({ id, end_id, action }) => (
-                /*this key unique it's necessairy but is a array map*/
-                <button
-                  className="button_chapter_choice"
-                  type="button"
-                  key={id}
-                  onClick={() => {
-                    const newStartCurrentChapter = chapters.find(
-                      (oneChapter) => oneChapter.id === end_id
-                    );
-
-                    setCurrentChapter(newStartCurrentChapter);
-
-                    if (Boolean(newStartCurrentChapter?.is_first) === true) {
-                      setHaveFragment(false);
-                    } else if (
-                      Boolean(newStartCurrentChapter?.gives_fragment) === true
-                    ) {
-                      setHaveFragment(true);
-                    }
-                  }}
-                >
-                  {action}
-                </button>
-              ))}
-          </div>
-        </section>
-      )}
     </>
   );
 }
