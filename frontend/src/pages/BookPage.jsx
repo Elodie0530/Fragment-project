@@ -7,6 +7,7 @@ function BookPage() {
   const [chapters, setChapters] = useState([]);
   const [currentChapter, setCurrentChapter] = useState(null);
   const [haveFragment, setHaveFragment] = useState(false);
+  const [showImagesChapters, setShowImagesChapters] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -44,17 +45,41 @@ function BookPage() {
           qui est le coeur du projet.
         </div>
 
+        <div>
+          <p className="text_info_show_images">
+            Vous pouvez choisir d'afficher ou non les images du livre à l'aide
+            du bouton ci-dessous :
+          </p>
+          <button
+            className="button_show_images"
+            type="button"
+            onClick={() => setShowImagesChapters(!showImagesChapters)}
+          >
+            {showImagesChapters ? "Cacher les images" : "Montrer les images"}
+          </button>
+        </div>
+
         {currentChapter != null && (
           <section>
             <h2>{currentChapter.title}</h2>
 
-            <img
-              className="images"
-              src={`${import.meta.env.VITE_BACKEND_URL}${
-                currentChapter.image_path
-              }`}
-              alt={currentChapter.image_alt}
-            />
+            {showImagesChapters ? (
+              <img
+                className="images"
+                src={`${import.meta.env.VITE_BACKEND_URL}${
+                  currentChapter.image_path
+                }`}
+                alt={currentChapter.image_alt}
+              />
+            ) : (
+              <p className="image_alt_if_choice_no_display">
+                <span className="image_alt_intro">
+                  Texte alternatif à l'image :
+                </span>
+                <br />
+                {currentChapter.image_alt}
+              </p>
+            )}
 
             <p className="display_text_current">{displayTextCurrentChapter}</p>
 

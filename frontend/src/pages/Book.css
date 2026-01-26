@@ -36,6 +36,29 @@
   text-align: left;
 }
 
+.text_info_show_images {
+  margin: 1rem 1.5rem;
+}
+
+.button_show_images {
+  background-color: gainsboro;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+
+.image_alt_if_choice_no_display {
+  background-color: rgb(250, 250, 185);
+  padding: 0.75rem 1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.image_alt_intro {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2;
+}
+
 .display_text_current {
   white-space: pre-wrap;
   text-align: left;
