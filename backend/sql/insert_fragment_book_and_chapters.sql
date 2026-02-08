@@ -37,7 +37,7 @@ De retour de voyage, ils ont constaté chez certains habitants des comportements
 Un mal inconnu ronge-t-il la ville ? Est-ce une simple épidémie… ou quelque chose de bien plus sombre ?
 
 Êtes-vous prêts pour cette aventure ?
-Si oui, cliquez sur le bouton ci-dessous qui vous permettra de naviguer entre les chapitres.
+Le bouton ci-dessous vous permettra de naviguer entre les chapitres.
 ",
 NULL,
 "/fragment/acte_1/carte_depart_onenta_aux_mines.jpg",

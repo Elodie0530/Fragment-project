@@ -38,27 +38,26 @@ function BookPage() {
 
   return (
     <>
-      <div className="book">
-        <h3>Hello Livre dont vous êtes le héros {id}</h3>
-        <div className="text_test">
-          Cette page sera consacrée à la partie livre dont vous êtes le héros
-          qui est le coeur du projet.
-        </div>
+      <div className="page_book">
+        <div className="title_book">
+          <h3>
+            Fragment <br /> <span>Livre dont vous êtes le héros</span>
+          </h3>
 
-        <div>
-          <p className="text_info_show_images">
-            Vous pouvez choisir d'afficher ou non les images du livre à l'aide
-            du bouton ci-dessous :
-          </p>
-          <button
-            className="button_show_images"
-            type="button"
-            onClick={() => setShowImagesChapters(!showImagesChapters)}
-          >
-            {showImagesChapters ? "Cacher les images" : "Montrer les images"}
-          </button>
+          <div className="show_images">
+            <p className="text_info_show_images">
+              Vous pouvez choisir d'afficher ou non les images du livre à l'aide
+              du bouton ci-dessous :
+            </p>
+            <button
+              className="button_show_images"
+              type="button"
+              onClick={() => setShowImagesChapters(!showImagesChapters)}
+            >
+              {showImagesChapters ? "Cacher les images" : "Montrer les images"}
+            </button>
+          </div>
         </div>
-
         {currentChapter != null && (
           <section>
             <h2>{currentChapter.title}</h2>
