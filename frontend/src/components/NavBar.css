@@ -1,10 +1,54 @@
 .nav_bar {
-  background-color: lightgray;
+  background-color: #f1dcc1;
+  border-bottom: 3px solid #e4d5c3;
+
+  ul {
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      padding: 0rem 0.2rem;
+    }
+  }
 
   .page {
+    position: relative;
     color: black;
-    padding: 0.5rem;
+    padding: 0.2rem 0.5rem;
     font-style: normal;
     text-decoration: none;
+    line-height: 2;
+    transition: background-color 0.3s ease;
+  }
+
+  .page:hover {
+    background-color: #f7e7ab;
+    border-radius: 25%;
+  }
+
+  /* Ligne de soulignement animée invisible au départ */
+  .page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0%;
+    height: 1px;
+    background-color: #a98f72;
+    transition: width 0.5s linear;
+  }
+
+  .page:hover::after {
+    width: 100%;
+  }
+
+  .page:focus {
+    outline: 1px solid #a98f72;
+    border-radius: 25%;
   }
 }

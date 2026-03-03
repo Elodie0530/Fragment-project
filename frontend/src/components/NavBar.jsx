@@ -5,29 +5,41 @@ function Navbar() {
   return (
     <nav className="nav_bar">
       <ul>
-        <Link to="/" className="page">
-          Accueil
-        </Link>
+        <li>
+          <Link to="/" className="page">
+            Accueil
+          </Link>
+        </li>
 
-        <Link to="/books" className="page">
-          Les livres dont vous êtes le héros
-        </Link>
+        <li>
+          <Link to="/books" className="page">
+            Les livres dont vous êtes le héros
+          </Link>
+        </li>
 
-        <Link to="/jdr" className="page">
-          Jeu de Rôle
-        </Link>
+        <li>
+          <Link to="/jdr" className="page">
+            Jeu de Rôle
+          </Link>
+        </li>
 
-        <Link to="/gn" className="page">
-          Mini-Grandeur Nature
-        </Link>
+        <li>
+          <Link to="/gn" className="page">
+            Mini-Grandeur Nature
+          </Link>
+        </li>
 
-        <Link to="/formulaire" className="page">
-          Formulaire - Avis
-        </Link>
+        <li>
+          <Link to="/formulaire" className="page">
+            Formulaire - Avis
+          </Link>
+        </li>
 
-        <Link to="/credits" className="page">
-          Crédits
-        </Link>
+        <li>
+          <Link to="/credits" className="page">
+            Crédits
+          </Link>
+        </li>
       </ul>
     </nav>
   );

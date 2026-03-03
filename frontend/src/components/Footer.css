@@ -1,5 +1,8 @@
 .footer {
+  background-color: #f1dcc1;
+  border-top: 3px solid #e4d5c3;
+
   p {
-    background-color: lightgray;
+    margin: 0;
   }
 }
