@@ -696,8 +696,8 @@ Que décidez-vous ?
 ",
 
 NULL,
-"/fragment/acte_2/image_non_definie.jpg",
-"Illustration non définie pour ce chapitre"),
+"/fragment/acte_2/inconnu_enigmatique_bourse.jpg",
+"Rue médiévale festive, un individu encapuchonné au visage en partie caché et aux oreilles rouges vous fait face."),
 
 -- Acte 2 — Chapitre 44 — Accepter le vol (=> Fragment bourse)
 (1,
