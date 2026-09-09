@@ -1,6 +1,7 @@
 import "./Book.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import useReadingProgress from "../components/bookUseReadingProgress";
 
 function BookPage() {
   const { id } = useParams();
@@ -8,6 +9,9 @@ function BookPage() {
   const [currentChapter, setCurrentChapter] = useState(null);
   const [haveFragment, setHaveFragment] = useState(false);
   const [showImagesChapters, setShowImagesChapters] = useState(true);
+  const { visitLog, visitChapter } = useReadingProgress(id);
+  //test step 1 : console.log decomment step 3//
+  console.log("Journal de lecture :", visitLog);
 
   useEffect(() => {
     fetch(
@@ -61,7 +65,6 @@ function BookPage() {
         {currentChapter != null && (
           <section>
             <h2>{currentChapter.title}</h2>
-
             {showImagesChapters ? (
               <img
                 className="images"
@@ -79,9 +82,7 @@ function BookPage() {
                 {currentChapter.image_alt}
               </p>
             )}
-
             <p className="display_text_current">{displayTextCurrentChapter}</p>
-
             <div className="chapter_choice">
               {currentChapter.actions
                 .sort((a, b) => a.position - b.position)
@@ -97,20 +98,46 @@ function BookPage() {
                       );
 
                       setCurrentChapter(newStartCurrentChapter);
+                      /*step 2 : check the numbers chapter and version in the inspector*/
 
-                      if (Boolean(newStartCurrentChapter?.is_first) === true) {
+                      /*if (Boolean(newStartCurrentChapter?.is_first) === true) {
                         setHaveFragment(false);
                       } else if (
                         Boolean(newStartCurrentChapter?.gives_fragment) === true
                       ) {
                         setHaveFragment(true);
-                      }
+                      }*/
+
+                      const newHaveFragment =
+                        Boolean(newStartCurrentChapter?.is_first) === true
+                          ? false
+                          : Boolean(newStartCurrentChapter?.gives_fragment) ===
+                              true
+                            ? true
+                            : haveFragment;
+
+                      setHaveFragment(newHaveFragment);
+
+                      const version =
+                        newHaveFragment && newStartCurrentChapter?.text_insane
+                          ? "insane"
+                          : "normal";
+                      visitChapter(newStartCurrentChapter.number, version);
+                      console.log("Chapitre enregistré :", {
+                        chapterId: newStartCurrentChapter.number,
+                        version,
+                      });
                     }}
                   >
                     {action}
                   </button>
                 ))}
             </div>
+            {/* test step 1 : test useReadingProgress(id), verification of separate recording for the normal and insane versions.
+           <button type="button" onClick={() => visitChapter(1, "insane")}>
+              TEST chapitre 1 fou
+            </button>
+            ;*/}
           </section>
         )}
       </div>
