@@ -46,11 +46,31 @@ function useReadingProgress(historyId) {
   const visitChapterCount = visitChapterIds.size;
   console.log("comptage 1x des chapitres", visitChapterCount);
 
+  /*step 5 : add count of unique chapters visited version normal and insane, test in the inspector*/
+  const normalVersionIds = new Set();
+  const insaneVersionIds = new Set();
+
+  visitLog.map((visit) => {
+    if (visit.version === "normal") {
+      normalVersionIds.add(visit.chapterId);
+    } else {
+      insaneVersionIds.add(visit.chapterId);
+    }
+  });
+
+  const normalVersionCount = normalVersionIds.size;
+  console.log("comptage 1x des chapitres normal", normalVersionCount);
+
+  const insaneVersionCount = insaneVersionIds.size;
+  console.log("comptage 1x des chapitres folie", insaneVersionCount);
+
   return {
     visitLog,
     visitChapter,
     visitChapterIds,
     visitChapterCount,
+    normalVersionCount,
+    insaneVersionCount,
   };
 }
 
