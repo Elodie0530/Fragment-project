@@ -40,9 +40,17 @@ function useReadingProgress(historyId) {
     });
   };
 
+  /*step 4 : add count of unique chapters visited, test in the inspector*/
+  const visitChapterIds = new Set(visitLog.map((visit) => visit.chapterId));
+
+  const visitChapterCount = visitChapterIds.size;
+  console.log("comptage 1x des chapitres", visitChapterCount);
+
   return {
     visitLog,
     visitChapter,
+    visitChapterIds,
+    visitChapterCount,
   };
 }
 
