@@ -9,9 +9,10 @@ function BookPage() {
   const [currentChapter, setCurrentChapter] = useState(null);
   const [haveFragment, setHaveFragment] = useState(false);
   const [showImagesChapters, setShowImagesChapters] = useState(true);
-  const { visitLog, visitChapter } = useReadingProgress(id);
+  const { visitLog, visitChapter, game_statistics } = useReadingProgress(id);
   //test step 1 : console.log decomment step 3//
   console.log("Journal de lecture :", visitLog);
+  console.log("statistiques :", game_statistics);
 
   useEffect(() => {
     fetch(

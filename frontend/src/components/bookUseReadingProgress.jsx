@@ -77,14 +77,19 @@ function useReadingProgress(historyId) {
   const fragmentCount = fragmentIds.size;
   console.log("comptage fragment obtenu", fragmentCount);
 
-  return {
-    visitLog,
-    visitChapter,
-    visitChapterIds,
+  /*step 8 : regroup game statistics for bookPage.jsx*/
+  const game_statistics = {
     visitChapterCount,
     normalVersionCount,
     insaneVersionCount,
     fragmentCount,
+  };
+
+  return {
+    visitLog,
+    visitChapter,
+    visitChapterIds,
+    game_statistics,
   };
 }
 
