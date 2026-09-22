@@ -122,10 +122,20 @@ function BookPage() {
                         newHaveFragment && newStartCurrentChapter?.text_insane
                           ? "insane"
                           : "normal";
-                      visitChapter(newStartCurrentChapter.number, version);
+
+                      /*step 6 : add gives_fragment to visitLog in bookUseReadingProgress.jsx, test in the inspector*/
+                      const gives_fragment =
+                        newStartCurrentChapter.gives_fragment;
+
+                      visitChapter(
+                        newStartCurrentChapter.number,
+                        version,
+                        gives_fragment,
+                      );
                       console.log("Chapitre enregistré :", {
                         chapterId: newStartCurrentChapter.number,
                         version,
+                        gives_fragment,
                       });
                     }}
                   >

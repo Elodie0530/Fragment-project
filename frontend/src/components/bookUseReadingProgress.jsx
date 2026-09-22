@@ -17,7 +17,7 @@ function useReadingProgress(historyId) {
     localStorage.setItem(storageKey, JSON.stringify(visitLog));
   }, [storageKey, visitLog]);
 
-  const visitChapter = (chapterId, version) => {
+  const visitChapter = (chapterId, version, gives_fragment) => {
     setVisitLog((currentVisitLog) => {
       /*step 3 : add all chapters to visitLog and test compare in the inspector*/
       /*alreadyVisited prevents saving the same chapter twice*/
@@ -35,6 +35,7 @@ function useReadingProgress(historyId) {
         {
           chapterId,
           version,
+          gives_fragment,
         },
       ];
     });
@@ -64,6 +65,18 @@ function useReadingProgress(historyId) {
   const insaneVersionCount = insaneVersionIds.size;
   console.log("comptage 1x des chapitres folie", insaneVersionCount);
 
+  /*step 7 : add count of unique chapters giving a fragment, test in the inspector*/
+  const fragmentIds = new Set();
+
+  visitLog.map((visit) => {
+    if (visit.gives_fragment === 1) {
+      fragmentIds.add(visit.chapterId);
+    }
+  });
+
+  const fragmentCount = fragmentIds.size;
+  console.log("comptage fragment obtenu", fragmentCount);
+
   return {
     visitLog,
     visitChapter,
@@ -71,6 +84,7 @@ function useReadingProgress(historyId) {
     visitChapterCount,
     normalVersionCount,
     insaneVersionCount,
+    fragmentCount,
   };
 }
 
