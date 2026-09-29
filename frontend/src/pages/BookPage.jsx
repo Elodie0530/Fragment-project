@@ -2,6 +2,7 @@ import "./Book.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useReadingProgress from "../components/bookUseReadingProgress";
+import PageGameEnd from "../components/bookPageGameEnd";
 
 function BookPage() {
   const { id } = useParams();
@@ -13,6 +14,7 @@ function BookPage() {
   //test step 1 : console.log decomment step 3//
   console.log("Journal de lecture :", visitLog);
   console.log("statistiques :", game_statistics);
+  const [showGameEnd, setShowGameEnd] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -39,6 +41,10 @@ function BookPage() {
     } else {
       displayTextCurrentChapter = currentChapter.text_normal;
     }
+  }
+
+  if (showGameEnd) {
+    return <PageGameEnd />;
   }
 
   return (
@@ -97,11 +103,17 @@ function BookPage() {
                       const newStartCurrentChapter = chapters.find(
                         (oneChapter) => oneChapter.id === end_id,
                       );
+                      console.log("clic sur choix", end_id);
+                      if (end_id === 1) {
+                        console.log("fin de partie !", end_id);
+                        setShowGameEnd(true);
+                      } else {
+                        setCurrentChapter(newStartCurrentChapter);
 
-                      setCurrentChapter(newStartCurrentChapter);
-                      /*step 2 : check the numbers chapter and version in the inspector*/
+                        //setCurrentChapter(newStartCurrentChapter);
+                        /*step 2 : check the numbers chapter and version in the inspector*/
 
-                      /*if (Boolean(newStartCurrentChapter?.is_first) === true) {
+                        /*if (Boolean(newStartCurrentChapter?.is_first) === true) {
                         setHaveFragment(false);
                       } else if (
                         Boolean(newStartCurrentChapter?.gives_fragment) === true
@@ -109,35 +121,37 @@ function BookPage() {
                         setHaveFragment(true);
                       }*/
 
-                      const newHaveFragment =
-                        Boolean(newStartCurrentChapter?.is_first) === true
-                          ? false
-                          : Boolean(newStartCurrentChapter?.gives_fragment) ===
-                              true
-                            ? true
-                            : haveFragment;
+                        const newHaveFragment =
+                          Boolean(newStartCurrentChapter?.is_first) === true
+                            ? false
+                            : Boolean(
+                                  newStartCurrentChapter?.gives_fragment,
+                                ) === true
+                              ? true
+                              : haveFragment;
 
-                      setHaveFragment(newHaveFragment);
+                        setHaveFragment(newHaveFragment);
 
-                      const version =
-                        newHaveFragment && newStartCurrentChapter?.text_insane
-                          ? "insane"
-                          : "normal";
+                        const version =
+                          newHaveFragment && newStartCurrentChapter?.text_insane
+                            ? "insane"
+                            : "normal";
 
-                      /*step 6 : add gives_fragment to visitLog in bookUseReadingProgress.jsx, test in the inspector*/
-                      const gives_fragment =
-                        newStartCurrentChapter.gives_fragment;
+                        /*step 6 : add gives_fragment to visitLog in bookUseReadingProgress.jsx, test in the inspector*/
+                        const gives_fragment =
+                          newStartCurrentChapter.gives_fragment;
 
-                      visitChapter(
-                        newStartCurrentChapter.number,
-                        version,
-                        gives_fragment,
-                      );
-                      console.log("Chapitre enregistré :", {
-                        chapterId: newStartCurrentChapter.number,
-                        version,
-                        gives_fragment,
-                      });
+                        visitChapter(
+                          newStartCurrentChapter.number,
+                          version,
+                          gives_fragment,
+                        );
+                        console.log("Chapitre enregistré :", {
+                          chapterId: newStartCurrentChapter.number,
+                          version,
+                          gives_fragment,
+                        });
+                      }
                     }}
                   >
                     {action}
