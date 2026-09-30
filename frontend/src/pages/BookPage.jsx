@@ -11,9 +11,7 @@ function BookPage() {
   const [haveFragment, setHaveFragment] = useState(false);
   const [showImagesChapters, setShowImagesChapters] = useState(true);
   const { visitLog, visitChapter, game_statistics } = useReadingProgress(id);
-  //test step 1 : console.log decomment step 3//
   console.log("Journal de lecture :", visitLog);
-  console.log("statistiques :", game_statistics);
   const [showGameEnd, setShowGameEnd] = useState(false);
 
   useEffect(() => {
@@ -121,23 +119,11 @@ function BookPage() {
                       const newStartCurrentChapter = chapters.find(
                         (oneChapter) => oneChapter.id === end_id,
                       );
-                      console.log("clic sur choix", end_id);
+
                       if (end_id === 1) {
-                        console.log("fin de partie !", end_id);
                         setShowGameEnd(true);
                       } else {
                         setCurrentChapter(newStartCurrentChapter);
-
-                        //setCurrentChapter(newStartCurrentChapter);
-                        /*step 2 : check the numbers chapter and version in the inspector*/
-
-                        /*if (Boolean(newStartCurrentChapter?.is_first) === true) {
-                        setHaveFragment(false);
-                      } else if (
-                        Boolean(newStartCurrentChapter?.gives_fragment) === true
-                      ) {
-                        setHaveFragment(true);
-                      }*/
 
                         const newHaveFragment =
                           Boolean(newStartCurrentChapter?.is_first) === true
@@ -155,7 +141,6 @@ function BookPage() {
                             ? "insane"
                             : "normal";
 
-                        /*step 6 : add gives_fragment to visitLog in bookUseReadingProgress.jsx, test in the inspector*/
                         const gives_fragment =
                           newStartCurrentChapter.gives_fragment;
 
@@ -164,11 +149,6 @@ function BookPage() {
                           version,
                           gives_fragment,
                         );
-                        console.log("Chapitre enregistré :", {
-                          chapterId: newStartCurrentChapter.number,
-                          version,
-                          gives_fragment,
-                        });
                       }
                     }}
                   >
@@ -176,11 +156,6 @@ function BookPage() {
                   </button>
                 ))}
             </div>
-            {/* test step 1 : test useReadingProgress(id), verification of separate recording for the normal and insane versions.
-           <button type="button" onClick={() => visitChapter(1, "insane")}>
-              TEST chapitre 1 fou
-            </button>
-            ;*/}
           </section>
         )}
       </div>
