@@ -44,7 +44,7 @@ function BookPage() {
   }
 
   if (showGameEnd) {
-    return <PageGameEnd />;
+    return <PageGameEnd game_statistics={game_statistics} />;
   }
 
   return (
