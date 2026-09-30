@@ -44,7 +44,25 @@ function BookPage() {
   }
 
   if (showGameEnd) {
-    return <PageGameEnd game_statistics={game_statistics} />;
+    const totalChaptersTextNormal = chapters.filter(
+      (chapter) => chapter.text_normal,
+    ).length;
+    const totalChaptersTextInsane = chapters.filter(
+      (chapter) => chapter.text_insane,
+    ).length;
+    const totalFragments = chapters.filter(
+      (chapter) => chapter.gives_fragment,
+    ).length;
+
+    return (
+      <PageGameEnd
+        game_statistics={game_statistics}
+        totalChapters={chapters.length}
+        totalChaptersTextNormal={totalChaptersTextNormal}
+        totalChaptersTextInsane={totalChaptersTextInsane}
+        totalFragments={totalFragments}
+      />
+    );
   }
 
   return (
