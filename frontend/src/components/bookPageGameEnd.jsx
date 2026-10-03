@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 function PageGameEnd({
   game_statistics,
   totalChapters,
@@ -5,6 +7,8 @@ function PageGameEnd({
   totalChaptersTextInsane,
   totalFragments,
 }) {
+  const navigate = useNavigate();
+
   return (
     <div>
       <p>Les statistiques de la partie</p>
@@ -23,6 +27,8 @@ function PageGameEnd({
       <p>
         Fragments récoltés : {game_statistics.fragmentCount} / {totalFragments}
       </p>
+
+      <button onClick={() => navigate("/")}>Retour à l'accueil</button>
     </div>
   );
 }
