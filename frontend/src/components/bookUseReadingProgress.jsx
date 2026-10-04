@@ -63,11 +63,16 @@ function useReadingProgress(historyId) {
     fragmentCount,
   };
 
+  const resetGameProgress = () => {
+    setVisitLog([]);
+  };
+
   return {
     visitLog,
     visitChapter,
     visitChapterIds,
     game_statistics,
+    resetGameProgress,
   };
 }
 

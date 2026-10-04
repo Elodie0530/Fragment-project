@@ -6,6 +6,7 @@ function PageGameEnd({
   totalChaptersTextNormal,
   totalChaptersTextInsane,
   totalFragments,
+  resetGame,
 }) {
   const navigate = useNavigate();
 
@@ -28,7 +29,16 @@ function PageGameEnd({
         Fragments récoltés : {game_statistics.fragmentCount} / {totalFragments}
       </p>
 
-      <button onClick={() => navigate("/")}>Retour à l'accueil</button>
+      <button
+        onClick={() => {
+          resetGame();
+          navigate("/");
+        }}
+      >
+        Retour à l'accueil
+      </button>
+
+      <button onClick={resetGame}>Recommencer l'aventure</button>
     </div>
   );
 }

@@ -10,7 +10,8 @@ function BookPage() {
   const [currentChapter, setCurrentChapter] = useState(null);
   const [haveFragment, setHaveFragment] = useState(false);
   const [showImagesChapters, setShowImagesChapters] = useState(true);
-  const { visitLog, visitChapter, game_statistics } = useReadingProgress(id);
+  const { visitLog, visitChapter, game_statistics, resetGameProgress } =
+    useReadingProgress(id);
   console.log("Journal de lecture :", visitLog);
   const [showGameEnd, setShowGameEnd] = useState(false);
 
@@ -52,6 +53,16 @@ function BookPage() {
       (chapter) => chapter.gives_fragment,
     ).length;
 
+    const resetGame = () => {
+      const firstChapter = chapters.find(
+        (chapter) => Boolean(chapter.is_first) === true,
+      );
+      setCurrentChapter(firstChapter);
+      setHaveFragment(false);
+      setShowGameEnd(false);
+      resetGameProgress();
+    };
+
     return (
       <PageGameEnd
         game_statistics={game_statistics}
@@ -59,6 +70,7 @@ function BookPage() {
         totalChaptersTextNormal={totalChaptersTextNormal}
         totalChaptersTextInsane={totalChaptersTextInsane}
         totalFragments={totalFragments}
+        resetGame={resetGame}
       />
     );
   }
