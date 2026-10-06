@@ -18,16 +18,25 @@ function useReadingProgress(historyId) {
   }, [storageKey, visitLog]);
 
   const visitChapter = (chapterId, version, gives_fragment) => {
-    setVisitLog((currentVisitLog) => {
-      return [
-        ...currentVisitLog,
-        {
-          chapterId,
-          version,
-          gives_fragment,
-        },
-      ];
-    });
+    if (
+      !visitLog.find(
+        (visit) =>
+          visit.chapterId === chapterId &&
+          visit.version === version &&
+          visit.gives_fragment === gives_fragment,
+      )
+    ) {
+      setVisitLog((currentVisitLog) => {
+        return [
+          ...currentVisitLog,
+          {
+            chapterId,
+            version,
+            gives_fragment,
+          },
+        ];
+      });
+    }
   };
 
   const visitChapterIds = new Set(visitLog.map((visit) => visit.chapterId));

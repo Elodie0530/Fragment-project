@@ -42,6 +42,24 @@ function BookPage() {
     }
   }
 
+  useEffect(() => {
+    if (currentChapter) {
+      if (haveFragment && currentChapter.text_insane) {
+        visitChapter(
+          currentChapter.number,
+          "insane",
+          currentChapter.gives_fragment,
+        );
+      } else {
+        visitChapter(
+          currentChapter.number,
+          "normal",
+          currentChapter.gives_fragment,
+        );
+      }
+    }
+  }, [currentChapter, haveFragment, visitChapter]);
+
   if (showGameEnd) {
     const totalChaptersTextNormal = chapters.filter(
       (chapter) => chapter.text_normal,
@@ -147,20 +165,6 @@ function BookPage() {
                               : haveFragment;
 
                         setHaveFragment(newHaveFragment);
-
-                        const version =
-                          newHaveFragment && newStartCurrentChapter?.text_insane
-                            ? "insane"
-                            : "normal";
-
-                        const gives_fragment =
-                          newStartCurrentChapter.gives_fragment;
-
-                        visitChapter(
-                          newStartCurrentChapter.number,
-                          version,
-                          gives_fragment,
-                        );
                       }
                     }}
                   >
