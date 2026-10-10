@@ -3,8 +3,7 @@
 /* ========================= */
 
 .book {
-  /*background-color: antiquewhite;*/
-  padding: 2rem 0rem;
+  padding-bottom: 2rem;
 }
 
 .select_story {
@@ -125,5 +124,31 @@
       border: 1px solid rgba(0, 0, 0, 0.438);
       box-shadow: 0 2px 4px rgba(126, 7, 238, 0.3);
     }
+  }
+}
+
+/* ========================= */
+/* File bookPageGameEnd.jsx  */
+/* ========================= */
+
+.bookPageGameEnd {
+  .buttons_end_adventure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .button_end_adventure_home,
+  .button_end_adventure_replay {
+    background-color: #f7e7ab;
+    color: #493526;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    border: 2px solid #a98f72;
+    border-radius: 10px;
   }
 }

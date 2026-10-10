@@ -11,8 +11,8 @@ function PageGameEnd({
   const navigate = useNavigate();
 
   return (
-    <div>
-      <p>Les statistiques de la partie</p>
+    <div className="bookPageGameEnd">
+      <h3>Les statistiques de la partie</h3>
       <p>
         Nombre total de chapitres visités : {game_statistics.visitChapterCount}{" "}
         / {totalChapters}
@@ -28,17 +28,21 @@ function PageGameEnd({
       <p>
         Fragments récoltés : {game_statistics.fragmentCount} / {totalFragments}
       </p>
+      <div className="buttons_end_adventure">
+        <button
+          className="button_end_adventure_home"
+          onClick={() => {
+            resetGame();
+            navigate("/");
+          }}
+        >
+          Retour à l'accueil
+        </button>
 
-      <button
-        onClick={() => {
-          resetGame();
-          navigate("/");
-        }}
-      >
-        Retour à l'accueil
-      </button>
-
-      <button onClick={resetGame}>Recommencer l'aventure</button>
+        <button className="button_end_adventure_replay" onClick={resetGame}>
+          Recommencer l'aventure
+        </button>
+      </div>
     </div>
   );
 }
