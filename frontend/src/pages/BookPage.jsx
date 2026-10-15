@@ -89,6 +89,7 @@ function BookPage() {
         totalChaptersTextInsane={totalChaptersTextInsane}
         totalFragments={totalFragments}
         resetGame={resetGame}
+        chapters={chapters}
       />
     );
   }
