@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import TreeProgressChapters from "./bookTreeProgressChapters";
 
 function PageGameEnd({
   game_statistics,
@@ -28,6 +29,11 @@ function PageGameEnd({
       <p>
         Fragments récoltés : {game_statistics.fragmentCount} / {totalFragments}
       </p>
+
+      <div>
+        <TreeProgressChapters />
+      </div>
+
       <div className="buttons_end_adventure">
         <button
           className="button_end_adventure_home"
