@@ -90,6 +90,7 @@ function BookPage() {
         totalFragments={totalFragments}
         resetGame={resetGame}
         chapters={chapters}
+        visitLog={visitLog}
       />
     );
   }

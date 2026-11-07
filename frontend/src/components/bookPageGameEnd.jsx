@@ -9,6 +9,7 @@ function PageGameEnd({
   totalFragments,
   resetGame,
   chapters,
+  visitLog,
 }) {
   const navigate = useNavigate();
 
@@ -32,7 +33,7 @@ function PageGameEnd({
       </p>
 
       <div>
-        <TreeProgressChapters chapters={chapters} />
+        <TreeProgressChapters chapters={chapters} visitLog={visitLog} />
       </div>
 
       <div className="buttons_end_adventure">

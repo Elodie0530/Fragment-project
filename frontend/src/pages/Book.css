@@ -152,3 +152,123 @@
     border-radius: 10px;
   }
 }
+
+/* ========================= */
+/* File bookTreeProgressChapters.jsx */
+/* ========================= */
+
+.bookTreeProgressChapters {
+  .graph {
+    max-width: 100%;
+    max-height: 70vh;
+    overflow: auto;
+    border: 1px solid #767676;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .graph:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+  }
+
+  .graph-svg {
+    display: block;
+    max-width: none;
+  }
+
+  /*liens possibles*/
+  .edge {
+    fill: none;
+    stroke: #c5c5c5;
+    stroke-width: 1.5;
+  }
+
+  /*transitions du parcours*/
+  .edge-normal {
+    stroke: #287346;
+    stroke-width: 3;
+    marker-end: url(#tree-arrow);
+  }
+
+  .edge-insane {
+    stroke: #7542a0;
+    stroke-width: 3;
+    marker-end: url(#tree-arrow);
+  }
+
+  /*chapitres non parcourus*/
+  .chapterCard {
+    fill: #ededed;
+    stroke: #b5b5b5;
+    stroke-width: 1.5;
+  }
+
+  /*version Lucide lue*/
+  .chapterCard-normal {
+    fill: #d9ebdd;
+    stroke: #287346;
+    stroke-width: 2;
+  }
+
+  /*version Folie lue*/
+  .chapterCard-insane {
+    fill: #e8ddf3;
+    stroke: #7542a0;
+    stroke-width: 2;
+  }
+
+  /*les deux versions lues*/
+  .chapterCard-both {
+    fill: #e3e0ed;
+    stroke: #65418b;
+    stroke-width: 2.5;
+  }
+
+  /*textes*/
+  .number {
+    fill: #242424;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .version {
+    fill: #666;
+    font-size: 10px;
+  }
+
+  .version-normal {
+    fill: #287346;
+    font-weight: 700;
+  }
+
+  .version-insane {
+    fill: #7542a0;
+    font-weight: 700;
+  }
+
+  .legend {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    text-align: left;
+
+    p {
+      font-weight: 600;
+      margin: 0 0 0.4rem;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 0.2rem 0;
+    }
+  }
+}
