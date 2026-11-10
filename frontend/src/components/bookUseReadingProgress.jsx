@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function useReadingProgress(historyId) {
+  /*Log visits chapter for statistics game end*/
   const storageKey = `fragment-reading-progress-${historyId}`;
 
   const [visitLog, setVisitLog] = useState(() => {
@@ -16,6 +17,21 @@ function useReadingProgress(historyId) {
   useEffect(() => {
     localStorage.setItem(storageKey, JSON.stringify(visitLog));
   }, [storageKey, visitLog]);
+
+  /*Log transitions player progress map end*/
+  const mapPassageStorageKey = `fragment-map-passage-${historyId}`;
+
+  const [mapPassageLog, setMapPassageLog] = useState(() => {
+    const savedMapPassages = localStorage.getItem(mapPassageStorageKey);
+    if (savedMapPassages) {
+      return JSON.parse(savedMapPassages);
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(mapPassageStorageKey, JSON.stringify(mapPassageLog));
+  }, [mapPassageStorageKey, mapPassageLog]);
 
   const visitChapter = (chapterId, version, gives_fragment) => {
     if (
@@ -72,8 +88,26 @@ function useReadingProgress(historyId) {
     fragmentCount,
   };
 
-  const resetGameProgress = () => {
+  /*regroup links map game end*/
+  const initializeMapPassageLog = useCallback((chapterNumber) => {
+    setMapPassageLog((currentMapPassageLog) => {
+      if (currentMapPassageLog.length === 0) {
+        return [chapterNumber];
+      }
+      return currentMapPassageLog;
+    });
+  }, []);
+
+  const recordMapPassage = (chapterNumber) => {
+    setMapPassageLog((currentMapPassageLog) => [
+      ...currentMapPassageLog,
+      chapterNumber,
+    ]);
+  };
+
+  const resetGameProgress = (firstChapterNumber) => {
     setVisitLog([]);
+    setMapPassageLog([firstChapterNumber]);
   };
 
   return {
@@ -82,6 +116,9 @@ function useReadingProgress(historyId) {
     visitChapterIds,
     game_statistics,
     resetGameProgress,
+    mapPassageLog,
+    initializeMapPassageLog,
+    recordMapPassage,
   };
 }
 

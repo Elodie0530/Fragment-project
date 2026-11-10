@@ -10,9 +10,24 @@ function BookPage() {
   const [currentChapter, setCurrentChapter] = useState(null);
   const [haveFragment, setHaveFragment] = useState(false);
   const [showImagesChapters, setShowImagesChapters] = useState(true);
-  const { visitLog, visitChapter, game_statistics, resetGameProgress } =
-    useReadingProgress(id);
-  console.log("Journal de lecture :", visitLog);
+  const {
+    visitLog,
+    visitChapter,
+    game_statistics,
+    resetGameProgress,
+    mapPassageLog,
+    initializeMapPassageLog,
+    recordMapPassage,
+  } = useReadingProgress(id);
+  console.log(
+    "Journal de lecture - chapitres uniques, versions et fragments :",
+    visitLog,
+  );
+  console.log(
+    "Journal des passages - historique de tous les déplacements :",
+    mapPassageLog,
+  );
+
   const [showGameEnd, setShowGameEnd] = useState(false);
 
   useEffect(() => {
@@ -24,14 +39,20 @@ function BookPage() {
       .then((response) => response.json())
       .then((data) => {
         setChapters(data);
-        setCurrentChapter(
-          data.find((dataElement) => Boolean(dataElement.is_first) === true),
+
+        const firstChapter = data.find(
+          (dataElement) => Boolean(dataElement.is_first) === true,
         );
+
+        setCurrentChapter(firstChapter);
+        if (firstChapter) {
+          initializeMapPassageLog(firstChapter.number);
+        }
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [id]);
+  }, [id, initializeMapPassageLog]);
 
   let displayTextCurrentChapter = "";
   if (currentChapter) {
@@ -78,7 +99,10 @@ function BookPage() {
       setCurrentChapter(firstChapter);
       setHaveFragment(false);
       setShowGameEnd(false);
-      resetGameProgress();
+
+      if (firstChapter) {
+        resetGameProgress(firstChapter.number);
+      }
     };
 
     return (
@@ -91,6 +115,7 @@ function BookPage() {
         resetGame={resetGame}
         chapters={chapters}
         visitLog={visitLog}
+        mapPassageLog={mapPassageLog}
       />
     );
   }
@@ -156,6 +181,7 @@ function BookPage() {
                         setShowGameEnd(true);
                       } else {
                         setCurrentChapter(newStartCurrentChapter);
+                        recordMapPassage(newStartCurrentChapter.number);
 
                         const newHaveFragment =
                           Boolean(newStartCurrentChapter?.is_first) === true

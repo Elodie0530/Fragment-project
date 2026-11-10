@@ -1,4 +1,8 @@
-function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
+function TreeProgressChapters({
+  chapters = [],
+  visitLog = [],
+  mapPassageLog = [],
+}) {
   if (chapters.length === 0) {
     return <p>Aucun chapitre à afficher.</p>;
   }
@@ -180,9 +184,9 @@ function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
   // identification des passages réellement parcourus
   const playedConnections = new Map();
 
-  for (let index = 1; index < visitLog.length; index += 1) {
-    const previousChapterNumber = visitLog[index - 1].chapterId;
-    const currentChapterNumber = visitLog[index].chapterId;
+  for (let index = 1; index < mapPassageLog.length; index += 1) {
+    const previousChapterNumber = mapPassageLog[index - 1];
+    const currentChapterNumber = mapPassageLog[index];
 
     const previousChapter = chaptersByNumber.get(previousChapterNumber);
     const currentChapter = chaptersByNumber.get(currentChapterNumber);
@@ -193,10 +197,7 @@ function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
 
     if (!chapterConnectionIds.has(edgeId)) continue;
 
-    // le passage prend la couleur de l'état du joueur au moment où il quitte le chapitre précédent
-    const version = visitLog[index - 1].version;
-
-    playedConnections.set(edgeId, version);
+    playedConnections.set(edgeId, true);
   }
 
   // les passages parcourus sont dessinés au-dessus des autres
@@ -251,8 +252,7 @@ function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
             const from = chapterNodesById.get(edge.from);
             const to = chapterNodesById.get(edge.to);
 
-            const version = playedConnections.get(edge.id);
-            const isPlayed = Boolean(version);
+            const isPlayed = playedConnections.has(edge.id);
 
             // départ à droite du chapitre source
             const startX = from.x + nodeWidth + 1;
@@ -262,7 +262,7 @@ function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
             const endX = to.x - 1;
             const endY = to.y + nodeHeight / 2;
 
-            const curve = Math.max(115, Math.abs(endX - startX) * 0.55);
+            const curve = Math.max(115, Math.abs(endX - startX) * 0.45);
 
             const path =
               endX >= startX
@@ -279,7 +279,7 @@ function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
               <path
                 key={edge.id}
                 d={path}
-                className={isPlayed ? `edge edge-${version}` : "edge"}
+                className={isPlayed ? "edge edge-normal" : "edge"}
                 markerEnd={isPlayed ? "url(#tree-arrow)" : undefined}
               />
             );
@@ -392,4 +392,4 @@ function BookTreeProgressChapters({ chapters = [], visitLog = [] }) {
   );
 }
 
-export default BookTreeProgressChapters;
+export default TreeProgressChapters;
