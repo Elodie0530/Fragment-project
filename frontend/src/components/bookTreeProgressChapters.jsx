@@ -1,8 +1,30 @@
+import { useEffect, useRef, useState } from "react";
+
 function TreeProgressChapters({
   chapters = [],
   visitLog = [],
   mapPassageLog = [],
 }) {
+  const [selectedPassage, setSelectedPassage] = useState(null);
+
+  const endGamePathPlayedRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedPassage === null) return;
+
+    const handleClickOutside = (event) => {
+      if (!endGamePathPlayedRef.current?.contains(event.target)) {
+        setSelectedPassage(null);
+      }
+    };
+
+    document.addEventListener("pointerdown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("pointerdown", handleClickOutside);
+    };
+  }, [selectedPassage]);
+
   if (chapters.length === 0) {
     return <p>Aucun chapitre à afficher.</p>;
   }
@@ -16,6 +38,23 @@ function TreeProgressChapters({
     chapters.map((chapter) => [chapter.number, chapter]),
   );
 
+  // construction textuel des passages, titres et versions y attenantes
+  let haveFragment = false;
+
+  const passages = mapPassageLog.map((chapterNumber) => {
+    const chapter = chaptersByNumber.get(chapterNumber);
+
+    if (chapter.is_first) haveFragment = false;
+    else if (chapter.gives_fragment) haveFragment = true;
+
+    return {
+      title: chapter.title,
+      state: haveFragment ? "insane" : "normal",
+      version: haveFragment && chapter.text_insane ? "insane" : "normal",
+      gives_fragment: chapter.gives_fragment,
+    };
+  });
+
   // versions déjà lues par le joueur
   const readVersionsByChapter = new Map();
 
@@ -27,7 +66,7 @@ function TreeProgressChapters({
     readVersionsByChapter.get(chapterNumber).add(version);
   });
 
-  // construction des passages possibles entre les chapitres
+  // construction des passages possibles entre les chapitres sur la carte
   const chapterConnections = [];
   const chapterConnectionIds = new Set();
   const nextChapterIdsByChapter = new Map();
@@ -214,7 +253,46 @@ function TreeProgressChapters({
         {readVersionsByChapter.size} chapitres découverts sur {chapters.length}.
       </p>
 
-      <p id="tree-progress-help">
+      <div className="endGame_log">
+        <h4>Votre progression dans l'histoire</h4>
+        <p className="introProgress_text">
+          Vous pouvez cliquer sur les numéros des chapitres pour afficher leur
+          titre et l'état dans lequel ils ont été parcourus. <br /> Les
+          chapitres portant une étoile ★ indiquent que vous avez trouvé un
+          fragment.
+        </p>
+
+        <div ref={endGamePathPlayedRef} className="endGame_pathPlayed_log">
+          {mapPassageLog.map((chapterNumber, index) => (
+            <span key={index}>
+              <button
+                type="button"
+                className={`endGame_pathPlayed_button ${
+                  selectedPassage === index ? "selected" : ""
+                } ${passages[index].gives_fragment ? "hasFragment" : ""}`}
+                onClick={() => setSelectedPassage(index)}
+              >
+                {chapterNumber}
+              </button>
+              {index < mapPassageLog.length - 1 && " → "}
+            </span>
+          ))}
+        </div>
+
+        {selectedPassage !== null && (
+          <p className="endGame_pathPlayed_describ">
+            Chapitre {mapPassageLog[selectedPassage]} :{" "}
+            {passages[selectedPassage].title} {" - État : "}
+            {passages[selectedPassage].state === "normal"
+              ? "Lucide"
+              : passages[selectedPassage].version === "normal"
+                ? "Folie (texte normal par défaut)"
+                : "Folie"}
+          </p>
+        )}
+      </div>
+
+      <p className="introProgress_text" id="tree-progress-intro">
         Faites défiler la carte horizontalement et verticalement pour
         l'explorer.
       </p>
@@ -223,7 +301,7 @@ function TreeProgressChapters({
         className="graph"
         role="region"
         aria-label="Carte des chapitres"
-        aria-describedby="tree-progress-help"
+        aria-describedby="tree-progress-intro"
         tabIndex={0}
       >
         <svg
@@ -322,7 +400,7 @@ function TreeProgressChapters({
                   textAnchor="middle"
                   className="number"
                 >
-                  {`Chapitre ${chapter.number}${chapter.gives_fragment ? " ★" : ""}`}
+                  {`Chapitre ${chapter.number}${chapterVisited && chapter.gives_fragment ? " ★ " : ""}`}
                 </text>
 
                 {chapterVisited && normalAvailable && (
