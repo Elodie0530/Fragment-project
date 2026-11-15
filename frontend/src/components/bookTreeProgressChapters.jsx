@@ -236,7 +236,8 @@ function TreeProgressChapters({
 
     if (!chapterConnectionIds.has(edgeId)) continue;
 
-    playedConnections.set(edgeId, true);
+    const state = passages[index - 1].state;
+    playedConnections.set(edgeId, state);
   }
 
   // les passages parcourus sont dessinés au-dessus des autres
@@ -330,7 +331,8 @@ function TreeProgressChapters({
             const from = chapterNodesById.get(edge.from);
             const to = chapterNodesById.get(edge.to);
 
-            const isPlayed = playedConnections.has(edge.id);
+            const state = playedConnections.get(edge.id);
+            const isPlayed = Boolean(state);
 
             // départ à droite du chapitre source
             const startX = from.x + nodeWidth + 1;
@@ -357,7 +359,7 @@ function TreeProgressChapters({
               <path
                 key={edge.id}
                 d={path}
-                className={isPlayed ? "edge edge-normal" : "edge"}
+                className={isPlayed ? `edge edge-${state}` : "edge"}
                 markerEnd={isPlayed ? "url(#tree-arrow)" : undefined}
               />
             );
