@@ -66,6 +66,14 @@ function TreeProgressChapters({
     readVersionsByChapter.get(chapterNumber).add(version);
   });
 
+  // chapitres parcourus en état de Folie
+  const chaptersVisitedStateInsane = new Set();
+  mapPassageLog.forEach((chapterNumber, index) => {
+    if (passages[index].state === "insane") {
+      chaptersVisitedStateInsane.add(chapterNumber);
+    }
+  });
+
   // construction des passages possibles entre les chapitres sur la carte
   const chapterConnections = [];
   const chapterConnectionIds = new Set();
@@ -374,15 +382,18 @@ function TreeProgressChapters({
             const normalAvailable = Boolean(chapter.text_normal?.trim());
             const insaneAvailable = Boolean(chapter.text_insane?.trim());
             const chapterVisited = versions !== undefined;
+            const insaneStateVisited = chaptersVisitedStateInsane.has(
+              chapter.number,
+            );
 
             let nodeClass = "";
 
             if (normalRead && insaneRead) {
               nodeClass = "chapterCard-both";
+            } else if (insaneStateVisited || insaneRead) {
+              nodeClass = "chapterCard-insane";
             } else if (normalRead) {
               nodeClass = "chapterCard-normal";
-            } else if (insaneRead) {
-              nodeClass = "chapterCard-insane";
             }
 
             return (
