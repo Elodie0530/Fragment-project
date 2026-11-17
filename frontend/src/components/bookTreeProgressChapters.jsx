@@ -416,6 +416,30 @@ function TreeProgressChapters({
                   {`Chapitre ${chapter.number}${chapterVisited && chapter.gives_fragment ? " ★ " : ""}`}
                 </text>
 
+                {/* Surlignement version lue en Lucide */}
+                {normalRead && normalAvailable && (
+                  <rect
+                    x={insaneAvailable ? x + 6 : x + 31}
+                    y={y + 29}
+                    width={52}
+                    height={15}
+                    rx="4"
+                    className="version-highlight-normal"
+                  />
+                )}
+
+                {/* Surlignement version lue en Folie */}
+                {insaneRead && insaneAvailable && (
+                  <rect
+                    x={normalAvailable ? x + 62 : x + 35}
+                    y={y + 29}
+                    width={44}
+                    height={15}
+                    rx="4"
+                    className="version-highlight-insane"
+                  />
+                )}
+
                 {chapterVisited && normalAvailable && (
                   <text
                     x={insaneAvailable ? x + 8 : x + nodeWidth / 2}
@@ -471,9 +495,10 @@ function TreeProgressChapters({
         <p>Légende :</p>
         <ul>
           <li>Gris : chapitre non parcouru</li>
-          <li>Vert : version Lucide lue</li>
-          <li>Violet : version Folie lue</li>
-          <li>Deux couleurs : les deux versions lues</li>
+          <li>Vert : chapitre parcouru en état Lucide</li>
+          <li>Violet : chapitre parcouru en état de Folie</li>
+          <li>✓ et ○ : version lue et version disponible mais non lue </li>
+          <li>Deux surlignements : les deux versions lues</li>
           <li>Trait gris : passage possible</li>
           <li>Trait coloré avec flèche : passage parcouru</li>
           <li>★ : chapitre donnant un fragment</li>
