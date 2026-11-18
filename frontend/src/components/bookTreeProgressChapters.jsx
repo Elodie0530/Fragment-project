@@ -6,15 +6,17 @@ function TreeProgressChapters({
   mapPassageLog = [],
 }) {
   const [selectedPassage, setSelectedPassage] = useState(null);
+  const [selectedMapChapter, setSelectedMapChapter] = useState(null);
 
   const endGamePathPlayedRef = useRef(null);
 
   useEffect(() => {
-    if (selectedPassage === null) return;
+    if (selectedPassage === null && selectedMapChapter === null) return;
 
     const handleClickOutside = (event) => {
       if (!endGamePathPlayedRef.current?.contains(event.target)) {
         setSelectedPassage(null);
+        setSelectedMapChapter(null);
       }
     };
 
@@ -23,7 +25,7 @@ function TreeProgressChapters({
     return () => {
       document.removeEventListener("pointerdown", handleClickOutside);
     };
-  }, [selectedPassage]);
+  }, [selectedPassage, selectedMapChapter]);
 
   if (chapters.length === 0) {
     return <p>Aucun chapitre à afficher.</p>;
@@ -54,6 +56,15 @@ function TreeProgressChapters({
       gives_fragment: chapter.gives_fragment,
     };
   });
+
+  const selectedPassageIndexes =
+    selectedPassage !== null
+      ? [selectedPassage]
+      : mapPassageLog
+          .map((chapterNumber, index) =>
+            chapterNumber === selectedMapChapter ? index : null,
+          )
+          .filter((index) => index !== null);
 
   // versions déjà lues par le joueur
   const readVersionsByChapter = new Map();
@@ -279,7 +290,10 @@ function TreeProgressChapters({
                 className={`endGame_pathPlayed_button ${
                   selectedPassage === index ? "selected" : ""
                 } ${passages[index].gives_fragment ? "hasFragment" : ""}`}
-                onClick={() => setSelectedPassage(index)}
+                onClick={() => {
+                  setSelectedPassage(index);
+                  setSelectedMapChapter(null);
+                }}
               >
                 {chapterNumber}
               </button>
@@ -288,17 +302,24 @@ function TreeProgressChapters({
           ))}
         </div>
 
-        {selectedPassage !== null && (
-          <p className="endGame_pathPlayed_describ">
-            Chapitre {mapPassageLog[selectedPassage]} :{" "}
-            {passages[selectedPassage].title} {" - État : "}
-            {passages[selectedPassage].state === "normal"
-              ? "Lucide"
-              : passages[selectedPassage].version === "normal"
-                ? "Folie (texte normal par défaut)"
-                : "Folie"}
-          </p>
-        )}
+        <div className="endGame_pathPlayed_describ" aria-live="polite">
+          {selectedMapChapter !== null &&
+            selectedPassageIndexes.length === 0 && (
+              <p>Chapitre {selectedMapChapter} - Non découvert</p>
+            )}
+
+          {selectedPassageIndexes.map((index) => (
+            <p key={index}>
+              Chapitre {mapPassageLog[index]} : {passages[index].title}
+              {" - État : "}
+              {passages[index].state === "normal"
+                ? "Lucide"
+                : passages[index].version === "normal"
+                  ? "Folie (texte normal par défaut)"
+                  : "Folie"}
+            </p>
+          ))}
+        </div>
       </div>
 
       <p className="introProgress_text" id="tree-progress-intro">
@@ -317,8 +338,8 @@ function TreeProgressChapters({
           className="graph-svg"
           width={width}
           height={height}
-          role="img"
-          aria-label="Chapitres, passages possibles et progression de lecture"
+          role="group"
+          aria-label="Carte interactive des chapitres et de la progression de lecture"
         >
           <defs>
             <marker
@@ -397,7 +418,27 @@ function TreeProgressChapters({
             }
 
             return (
-              <g key={chapter.id}>
+              <g
+                key={chapter.id}
+                className={`chapterMapCard ${
+                  selectedMapChapter === chapter.number ? "selected" : ""
+                }`}
+                role="button"
+                tabIndex={0}
+                aria-label={`Afficher les passages du chapitre ${chapter.number}`}
+                aria-pressed={selectedMapChapter === chapter.number}
+                onClick={() => {
+                  setSelectedPassage(null);
+                  setSelectedMapChapter(chapter.number);
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSelectedPassage(null);
+                    setSelectedMapChapter(chapter.number);
+                  }
+                }}
+              >
                 <rect
                   x={x}
                   y={y}

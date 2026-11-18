@@ -224,6 +224,13 @@
     .endGame_pathPlayed_describ {
       margin: unset;
       padding-top: 1rem;
+      height: 5.5rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+
+      p {
+        margin: unset;
+      }
     }
   }
 
@@ -245,6 +252,20 @@
   .graph-svg {
     display: block;
     max-width: none;
+  }
+
+  .chapterMapCard {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    /*identifier le chapitre sélectionné ou focus clavier*/
+    &.selected .chapterCard,
+    &:focus-visible .chapterCard {
+      filter: drop-shadow(0 0 9px #a98f72);
+    }
   }
 
   /*liens possibles*/
@@ -342,9 +363,8 @@
     }
 
     ul {
-      padding: 0;
+      padding: 0 0 0 1rem;
       margin: 0;
-      padding-left: 1rem;
     }
 
     li {
